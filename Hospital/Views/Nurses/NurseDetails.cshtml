@@ -1,0 +1,132 @@
+﻿@model Hospital.Models.SubAdmin.Nurse
+
+@{
+    ViewData["Title"] = "NurseDetails";
+    Layout = "~/Views/Shared/_NursesLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Nurse Details</h4>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Widget Item -->
+        <div class="col-md-12">
+            <div class="widget-area-2 proclinic-box-shadow">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h4>  @Html.DisplayNameFor(model => model.FullName)</h4>
+                                </td>
+                                <td>  @ViewBag.nurseDetail.FirstName @ViewBag.nurseDetail.LastName</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>  @Html.DisplayNameFor(model => model.EmailAddress) </h4>
+                                </td>
+                                <td>   @ViewBag.nurseDetail.Email</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>@Html.DisplayNameFor(model => model.Street)</h4>
+                                </td>
+                                <td>
+                                    @ViewBag.nurseDetail.Street
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4> @Html.DisplayNameFor(model => model.City)</h4>
+                                </td>
+                                <td>
+                                    @ViewBag.nurseDetail.City
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>@Html.DisplayNameFor(model => model.State)</h4>
+                                </td>
+                                <td>
+                                    @ViewBag.nurseDetail.State
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>@Html.DisplayNameFor(model => model.ZipCode)</h4>
+                                </td>
+                                <td>
+                                    @ViewBag.nurseDetail.ZipCode
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>@Html.DisplayNameFor(model => model.Country)</h4>
+                                </td>
+                                <td>
+                                    @ViewBag.nurseDetail.Country
+                                </td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>
+                                    <h4> @Html.DisplayNameFor(model => model.MobileNo) </h4>
+                                </td>
+                                <td>  @ViewBag.nurseDetail.PhoneNumber</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>   @Html.DisplayNameFor(model => model.Gender)</h4>
+                                </td>
+                                <td>   @ViewBag.nurseDetail.Gender </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4> @Html.DisplayNameFor(model => model.BloodGroup) </h4>
+                                </td>
+                                <td> @ViewBag.nurseDetail.BloodGroup</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>   @Html.DisplayNameFor(model => model.DateOfBirth) </h4>
+                                </td>
+                                <td>   @ViewBag.nurseDetail.DOB</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>  @Html.DisplayNameFor(model => model.Status)</h4>
+                                </td>
+                                <td>  @ViewBag.nurseDetail.Availiablity </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination export-pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-download "></span> csv</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-printer"></span> print</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-file "></span> PDF</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-align-justify"></span> Excel</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div>
+                        @*<a asp-action="EditNurse" asp-route-id="@Model.Id" class="btn btn-success mb-3"><i class="fa fa-pencil m-r-5"></i> Edit Nurse</a>*@
+
+                        <a class="btn btn-danger mb-3" asp-controller="Nurses" asp-action="NurseDelete" asp-route-id="@ViewBag.nurseDetail.Id" onclick="return confirm('Are you sure want to delete this nurse ?')"><i class="fa fa-trash-o m-r-5"></i> Delete Nurse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

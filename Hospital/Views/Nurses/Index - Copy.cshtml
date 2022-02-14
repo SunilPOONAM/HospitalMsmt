@@ -1,0 +1,87 @@
+﻿@model Hospital.CollectionViewModel.CollectionOfAll
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NursesLayout.cshtml";
+}
+
+
+<body id="bdy">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script>
+        document.getElementById("bdy").onload = function () { myFunction() };
+
+        function myFunction() {
+            toastr.success('Login Successful');
+        }
+</script>
+<div class="content">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <span class="dash-widget-bg1"><i class="fa fa-user-md" aria-hidden="true"></i></span>
+                <div class="dash-widget-info text-right">
+                    <h3>@ViewBag.docLists.Count</h3>
+                    <span class="widget-title1">Doctors <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <span class="dash-widget-bg2"><i class="fa fa-stethoscope" aria-hidden="true"></i></span>
+                <div class="dash-widget-info text-right">
+                    <h3>@ViewBag.nursLists.Count</h3>
+                    <span class="widget-title2">Nurses <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <span class="dash-widget-bg3"><i class="fa fa-user-o"></i></span>
+                <div class="dash-widget-info text-right">
+                    <h3>@Model.Patients.Count()</h3>
+                    <span class="widget-title3">Patients <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <span class="dash-widget-bg4"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                <div class="dash-widget-info text-right">
+                    <h3>@Model.Appointments.Count()</h3>
+                    <span class="widget-title4">Appointment <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <span class="dash-widget-bg4"><i class="fa fa-bed" aria-hidden="true"></i></span>
+                <div class="dash-widget-info text-right">
+                    <h3>@Model.Allotments.Count()</h3>
+                    <span class="widget-title4">Allotment <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <span class="dash-widget-bg3"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
+                <div class="dash-widget-info text-right">
+                    <h3>@Model.Department.Count()</h3>
+                    <span class="widget-title3">Department <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+            <div class="dash-widget">
+                <span class="dash-widget-bg2"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
+                <div class="dash-widget-info text-right">
+                    <h3>@Model.Schedules.Count()</h3>
+                    <span class="widget-title2">Schedules <i class="fa fa-check" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>

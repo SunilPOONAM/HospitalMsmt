@@ -1,0 +1,437 @@
+﻿@*@model IEnumerable<Hospital.Models.PricingPack>*@
+@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Identity
+@using Hospital.Models
+@model Hospital.Models.AccountViewModels.LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .about-img {
+        width: 100%;
+    }
+
+    .icon_img {
+        height: 50.94px;
+    }
+
+    .servis {
+        width: 285px;
+        text-align: center;
+        box-shadow: 0px 0px 5px 5px;
+        background-color: aqua;
+        float: left;
+        margin: 20px;
+    }
+
+    .head {
+        height: 50px;
+        background-color: beige;
+        font-size: 35px;
+    }
+
+    .desc {
+        height: auto;
+        font-size: 20px;
+    }
+
+    .price {
+        background-color: azure;
+    }
+
+    /*plans tiles*/
+    .block.block-bordered {
+        border: 1px solid #e6ebf4;
+        box-shadow: 0px 0px 5px 1px;
+    }
+
+    .block-header {
+        font-weight: bold;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: .75rem 1.25rem;
+        transition: opacity .25s ease-out;
+    }
+
+    .bg-body-light {
+        background-color: #f9fafc !important;
+        padding-bottom: 20px;
+    }
+
+    .block-content {
+        transition: opacity .25s ease-out;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.25rem 1.25rem 1px;
+        overflow-x: visible;
+    }
+
+    .bg-body-light {
+        background-color: #f9fafc;
+        padding-bottom: 20px;
+    }
+
+    .btn-hero-secondary.disabled, .btn-hero-secondary:disabled {
+        color: #fff;
+        background-color: #111;
+    }
+
+    .btn.disabled, .btn:disabled {
+        opacity: .65;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+
+    .col-md-6 {
+        width: 50%
+    }
+
+    .col-md-4 {
+        width: 33.33%;
+        float: left;
+    }
+
+    .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .block-header h3 {
+        text-align: center !important;
+    }
+
+    .btn_plan_box {
+        background-color: #086972 !important;
+        color: white;
+    }
+
+        .btn_plan_box a {
+            color: white;
+        }
+
+        .btn_plan_box .btn-price {
+            display: inline-block !important;
+            padding: 10px 30px !important;
+            font-weight: 300 !important;
+            text-decoration: none !important;
+            border-radius: 100px !important;
+            -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s !important;
+        }
+
+    .content_block {
+        padding: 20px !important;
+    }
+
+    .about-content p {
+        text-align: center;
+    }
+
+    .location_content {
+        padding: 30px;
+    }
+
+    .city_block {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mobile_row {
+        display: none;
+    }
+
+    @@media(max-width:768px) {
+        .col-xs-12, .col-sm-12, .col-md-6, .col-lg-6, .col-xl-6 {
+            float: none !important;
+        }
+
+        .col-xs-12, .col-sm-12, .col-md-4, .col-lg-4, .col-xl-4 {
+            width: 100px !important;
+            float: none !important;
+        }
+
+        .service-box {
+            width: 100% !important;
+        }
+
+        .desktop_row {
+            display: none !important;
+        }
+
+        .mobile_row {
+            display: block;
+        }
+    }
+
+    .service_row {
+        padding: 40px 0px 0px 0px;
+    }
+</style>
+<body id="registerAlert" style="overflow:hidden;">
+    <script>
+        document.getElementById("registerAlert").onload = function () { myFunction() };
+
+        function myFunction() {
+            toastr.success('Registered successfully. please login..!');
+        }
+    </script>
+
+    <header id="Home">
+
+        @Html.Partial("_HeaderPartial")
+
+        <div class="hero-text-box">
+            <h1 data-aos="fade-up" data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                Hospital Management<br> System.
+            </h1>
+            <br>
+            <a class="btn btn-ghost js-scroll-to-start" data-aos="fade-up" href="#">Show Me More</a>
+        </div>
+    </header>
+    <!--about us block-->
+    @*<section class="section-steps" style="padding-bottom: 70px;">
+            <div class="row">
+                <h2>About Us — Our Vision</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2 step-box aos-init aos-animate" data-aos="fade-right">
+                    <center>
+                        <img src="~/assets/img/PC-Chart.jpg" alt="Omnifood app on iphone" class="about-img js-wp-2 animated fadeInUp">
+                    </center>
+                </div>
+                <div class="col span-1-of-2 step-box aos-init" data-aos="fade-left">
+                    <div class="works-step">
+                        <div>1</div>
+                        <p>Hopital Management System (HMS) is open to all patients every day and provides fundamental medical care and cutting-edge medicine.</p>
+                    </div>
+                    <div class="works-step">
+                        <div>2</div>
+                        <p>We use our academic knowledge to treat a wide range of health issues, taking a personal touch and utilizing highly specialized and up-to-date research.</p>
+                    </div>
+                    <div class="works-step">
+                        <div>3</div>
+                        <p>
+                            We will innovate and define the future of health care for generations
+                            and will be the consumer's first choice for health care.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+    <!--about us block-->
+    <!--six blocks with services-->
+    <section class="section-cities service_row" id="services">
+        <div class="row">
+            <h2>Our Services</h2>
+        </div>
+        <div class="row js-wp-3">
+            <div class="service-box col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 center-block" data-aos="fade-left">
+                <center><img src="~/assets/img/ambulance.png" class="img-responsive icon_img" /></center>
+                <div class="content_block">
+                    <h3 class="text-center heading-1">Ambulance</h3>
+                    <div class="about-content">
+                        <p>  Ambulance Services provides 24 hours ambulance service Lucknow to critically injured individuals. Our ambulances provide emergency and medical transportation support.Ambulance Services support patients across World. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-box col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 center-block" data-aos="fade-up">
+                <center><img src="~/assets/img/ortho.png" class="img-responsive icon_img" /></center>
+                <div class="content_block">
+                    <h3 class="text-center heading-1">Orthopedics</h3>
+                    <div class="about-content">
+                        <p>Our Hospitals offers key & best orthopedic surgeries and procedures in India. We perform bone and joint replacement surgeries which include the most current Arthroscopic and Reconstructive techniques. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-box col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 center-block" data-aos="fade-right">
+                <center><img src="~/assets/img/cancer.png" class="img-responsive icon_img" /></center>
+                <div class="content_block">
+                    <h3 class="text-center heading-1">Cancer Centre</h3>
+                    <div class="about-content">
+                        <p>Our Hospitals provides comprehensive cancer care with best treatment facilities in India. Our expert team of oncologists examines every case jointly and decides on the best line of cancer treatment for the patient.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row js-wp-3">
+            <div class="service-box col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 center-block" data-aos="fade-left">
+                <center><img src="~/assets/img/brain.png" class="img-responsive icon_img" /></center>
+                <div class="content_block">
+                    <h3 class="text-center heading-1">Neurosciences</h3>
+                    <div class="about-content">
+                        <p>The department of neurosurgery at our hospitals in India is well equipped to treat all the neurological diseases including stroke, headache, epilepsy, coma, neuropathies, multiple sclerosis, myopathies, Parkinson’s disease, Myasthenia Gravis and many more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-box col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 center-block" data-aos="fade-up">
+                <center><img src="~/assets/img/gast.png" class="img-responsive icon_img" /></center>
+                <div class="content_block">
+                    <h3 class="text-center heading-1">Gastroenterology</h3>
+                    <div class="about-content">
+                        <p>Gastroenterology essentially addresses diseases of the esophagus, stomach, small intestine, colon and rectum, pancreas, gallbladder, bile ducts and liver. The Gastrointestinal surgeons manage major treatments related to gastrointestinal surgical problems of the intestines.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-box col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 center-block" data-aos="fade-right">
+                <center><img src="~/assets/img/kidney.png" class="img-responsive icon_img" /></center>
+                <div class="content_block">
+                    <h3 class="text-center heading-1">Transplant</h3>
+                    <div class="about-content">
+                        <p>The Pc Chart Institutes of Transplant program is one of the world’s largest and most comprehensive solid multi-organ transplantation in India.An eminent pool of internationally renowned Transplant Surgeons, Nephrologists, Gastroenterologists ,Surgeons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--six block with services-->
+
+
+    <section class="section-cities service_row" id="cities">
+        <div class="row">
+            <h2>We're currently in these cities</h2>
+
+            <div class="location-box col-md-6" data-aos="fade-left">
+                <div class="img-block">
+                    <img src="~/assets/img/place-1.jpg" class="img-responsive city_block" />
+                </div>
+            </div>
+            <div class="location-box col-md-6" data-aos="fade-right">
+                <div class="content-block">
+                    <p class="location_content">
+                        <h3 class="heading-1">LAHORE</h3>
+                        Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.
+
+                        We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row desktop_row">
+            <div class="location-box col-md-6" data-aos="fade-left">
+                <div class="content-block">
+                    <p class="location_content">
+                        <h3 class="heading-1">GUJRANWALA</h3>
+                        Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.
+
+                        We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc.
+                    </p>
+                </div>
+            </div>
+            <div class="location-box col-md-6" data-aos="fade-right">
+                <div class="img-block">
+                    <img src="~/assets/img/place-2.jpg" class="img-responsive city_block" />
+                </div>
+            </div>
+        </div>
+        <div class="row mobile_row">
+
+            <div class="location-box col-md-6" data-aos="fade-left">
+                <div class="img-block">
+                    <img src="~/assets/img/place-2.jpg" class="img-responsive city_block" />
+                </div>
+            </div>
+            <div class="location-box col-md-6" data-aos="fade-right">
+                <div class="content-block">
+                    <p class="location_content">
+                        <h3 class="heading-1">GUJRANWALA</h3>
+                        Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.
+
+                        We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="location-box col-md-6" data-aos="fade-left">
+                <div class="img-block">
+                    <img src="~/assets/img/place-3.jpg" class="img-responsive city_block" />
+                </div>
+            </div>
+            <div class="location-box col-md-6" data-aos="fade-right">
+                <div class="content-block">
+                    <p class="location_content">
+                        <h3 class="heading-1">FAISLABAD</h3>
+                        Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.
+
+                        We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-testimonials" id="reviews">
+        <div class="row">
+            <h2>Our patients can't live without us</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3 blockquote_section" data-aos="fade-right">
+                <blockquote>HMS is just awesome! I just launched a startup which leaves me with no time for Medicine, so Omnifood is a life-saver. Now that I got used to it</blockquote>
+                <cite><img src="~/Layout/resources/img/customer-1.jpg" alt="first-customer">Alberto Duncan</cite>
+            </div>
+            <div class="col span-1-of-3 blockquote_section" data-aos="fade-up">
+                <blockquote>HMS is just awesome! I just launched a startup which leaves me with no time for Medicine, so Omnifood is a life-saver. Now that I got used to it</blockquote>
+                <cite><img src="~/Layout/resources/img/customer-2.jpg" alt="first-customer">Joana Silva</cite>
+            </div>
+            <div class="col span-1-of-3 blockquote_section" data-aos="fade-left">
+                <blockquote>HMS is just awesome! I just launched a startup which leaves me with no time for Medicine, so Omnifood is a life-saver. Now that I got used to it</blockquote>
+                <cite><img src="~/Layout/resources/img/customer-3.jpg" alt="first-customer">Milton Chapman</cite>
+            </div>
+        </div>
+    </section>
+
+    <p id="modelvalue" style="display:none;">@ViewBag.wrongLoginOpenModel</p>
+
+
+    @section Scripts {
+        @await Html.PartialAsync("_ValidationScriptsPartial")
+    }
+
+    @Html.Partial("_FooterPartial")
+    @*<script>
+            $('.signin-btn').click(function () {
+                $('.nav-menu').slideup('slow');
+            });
+        </script>*@
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        
+        var data = document.getElementById("modelvalue").innerHTML;
+        if (data == "0") {
+            $("#id01").show();
+        }
+    });
+
+</script>

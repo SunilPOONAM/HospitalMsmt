@@ -1,0 +1,713 @@
+﻿@model Hospital.Models.AccountViewModels.LoginViewModel
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>@ViewData["Title"]</title>
+<script>
+    AOS.init();
+</script>
+
+<style>
+   
+    @@media(max-width:768px) {
+        .modal-content {
+            width: 100% !important;
+            margin: 30% auto 15% auto!important;
+        }
+    }
+    .closing_price_model {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #fff !important;
+        font-size: 14px !important;
+        font-weight: bold;
+        background-color: #086972 !important;
+        padding: 12px 11px;
+        border-radius: 2px !important;
+        width: 123px !important;
+        height: 40px !important;
+        line-height: 17px !important;
+    }
+
+    .price_model {
+        height: 555px;
+    }
+
+    .price_container {
+        margin-top: -70px;
+    }
+
+    #id02 {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+
+    #generic_price_table .generic_content {
+        margin: 5px !important;
+        height: 590px;
+        border: 5px solid #086972;
+    }
+    #generic_price_table .generic_content:hover {
+        box-shadow: 0px 0px 3px 2px;
+    }
+        .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+        .dropdown .dropbtn {
+            border: none;
+            outline: none;
+            color: white;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        border-radius: 2px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            float: none;
+            color: black !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            cursor: pointer;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+
+
+    .fa1 {
+        padding: 10px;
+        font-size: 12px;
+        width: 25px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0px 1px 0px 5px;
+        border-radius: 50%;
+    }
+
+    .fb1 {
+        width: 27px !important;
+    }
+
+    .fa1:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+        line-height: 18px;
+        padding: 3px;
+    }
+
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+        line-height: 18px;
+        padding: 3px;
+    }
+
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+        line-height: 18px;
+        padding: 3px;
+    }
+
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+        line-height: 18px;
+        padding: 3px;
+    }
+
+    .fa-instagram {
+        background: #125688;
+        color: white;
+        line-height: 18px;
+        padding: 3px;
+    }
+
+    .top_header_left .contact_no {
+        color: white !important;
+        margin-top: 2px;
+        margin-left: 30px;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .top_header_right a {
+        color: white !important;
+    }
+
+    .top_header_right {
+        margin-right: 30px;
+    }
+
+    .row_new {
+        width: 100% !important;
+        background-color: black !important;
+        min-width: 100% !important;
+    }
+
+    .top_header_right {
+        padding-top: 1px;
+    }
+
+
+    /*--- Login model css ---*/
+
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+        width: 100%;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    /* Set a style for all buttons */
+    button {
+        background-color: #086972;
+        color: white;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #086972;
+    }
+
+    /* Center the image and position the close button */
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+    }
+
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 50px;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 50%; /* Could be more or less, depending on screen size */
+        border-radius: 15px;
+    }
+
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .closemodel2 {
+        right: -14px;
+        opacity: 0.8;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
+    @@-webkit-keyframes animatezoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @@keyframes animatezoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @@media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+
+
+
+    /*--- Social Icons ---*/
+    .icon-bar {
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 999;
+    }
+    
+    .icon-bar a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+    }
+
+            .icon-bar a:hover {
+                background-color: #000;
+            }
+
+    .facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    .twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    #id01 {
+        padding: 0px !important;
+    }
+
+    .google {
+        background: #dd4b39;
+        color: white;
+    }
+
+    .linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    .youtube {
+        background: #bb0000;
+        color: white;
+    }
+
+    .pageTitle {
+        font-family: fantasy;
+        color: mintcream;
+        letter-spacing: 5px;
+        border-bottom: 7px solid indianred;
+        font-size: xxx-large;
+        float: right;
+        margin-top: 266px;
+    }
+</style>
+
+<div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="google"><i class="fa fa-google"></i></a>
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+
+<nav class="nav-menu sticky">
+    <div class="row row_new" style="width: 100% !important;">
+        <div class="top_row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="float:left;">
+                <div class="top_header_left">
+                    <div class="contact_no">
+                        <i class="fa fa-phone" aria-hidden="true"></i> +91-9999 999 999 |
+                        <i class="fa fa-envelope" aria-hidden="true"></i> hms@gmail.com
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="float:right;">
+                    <div class="top_header_right pull-right">
+                        <a href="#" class="fa fa1 fb1 fa-facebook"></a>
+                        <a href="#" class="fa fa1 fa-twitter"></a>
+                        <a href="#" class="fa fa1 fa-linkedin"></a>
+                        <a href="#" class="fa fa1 fa-youtube"></a>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+    <div class="row" @*style="background-color: #086972 !important;"*@>
+        <img src="~/assets/img/logo.png" alt="HMS logo" class="logo">
+        @*<img src="~/Layout/resources/img/logo-1.png" alt="HMS logo" class="logo" />*@
+        <img src="~/assets/img/logo.png" alt="HMS logo" class="logo-black">
+        <ul class="main-nav js-main-nav">
+            <li><a href="/Home/Index"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="/Home/AboutUs"><i class="fa fa-users" aria-hidden="true"></i> About</a></li>
+            <li><a href="/Home/PlanSubscription"><i class="fa fa-list"></i> Plan & subscription</a></li>
+            <li><a href="/Home/Contact"><i class="fa fa-address-book-o"></i> Contact</a></li>
+
+
+            @*@if (User.IsInRole("Admin"))
+        {
+            <li><a href="@Url.Action("Index", "Admin")">Admin</a></li>
+        }*@
+
+            @if (ViewBag.loginUserDetail == null)
+            {
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn" style="text-transform:uppercase">
+                            <i class="fa fa-power-off" aria-hidden="true"></i> SignIn / SignUp
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a style="border-bottom:unset !important;" onclick="document.getElementById('id01').style.display='block'" class="signIn-btn"><i class="fa fa-sign-in" aria-hidden="true"></i> Signin</a>
+                            <a style="padding: 12px 16px; text-transform:capitalize; border-bottom:unset !important;" href="@Url.Action("Register", "Home")"><i class="fa fa-user-plus" aria-hidden="true"></i> New User</a>
+
+                        </div>
+                    </div>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <div class="dropdown">
+                            <button class="dropbtn">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i> @ViewBag.loginUserDetail.FirstName @ViewBag.loginUserDetail.LastName
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <form class="dropdown-item" method="post" asp-controller="Account" asp-action="Logout">
+                                    <button style="border-bottom:unset !important;" class="signIn-btn"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
+                                </form>
+                                <a style="padding: 12px 16px; text-transform:capitalize; border-bottom:unset !important;" href="@Url.Action("DashboardRedirect", "Home")"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a>
+
+                            </div>
+                    </div>
+                </li>
+            }
+        </ul>
+        <a class="mobile-nav-icon js-mobile-nav-icon"><i class="ion-ios-menu"></i></a>
+    </div>
+</nav>
+
+
+<center>
+    <div id="id01" class="modal fade" style="overflow: hidden;">
+        <div class="modal-dialog">
+
+            <form class="modal-content animate" asp-action="Index" asp-controller="Home" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <h2>Login</h2>
+                </div>
+
+
+                <div class="container" style="text-align: left;">
+                    <i class="fa fa-user"></i> <label for="uname"><b>Username</b></label>
+                    <input type="email" asp-for="Email" placeholder="Enter Username" required>
+                    <br /> <br />
+                    <i class="fa fa-lock"></i> <label for="psw"><b>Password</b></label>
+                    <input type="password" asp-for="Password" placeholder="Enter Password" required>
+
+                    <button type="submit" style="padding:14px 0px">Login</button>
+                    <label style="text-align: center;">
+                        @*<input type="checkbox" checked="checked" name="remember"> Remember me*@
+                        <center>
+                            <a href="@Url.Action("Register","Home")">New User?</a> |  <span class="psw-box"> <a asp-controller="Account" asp-action="ForgotPassword">Forgot password?</a></span>
+                        </center>
+                    </label>
+
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</center>
+
+
+<center>
+    <div id="id02" class="modal fade" style="overflow: hidden;">
+        <div class="modal-dialog" style="width: 100%;">
+
+            <form class="modal-content price_model animate" asp-action="Index" asp-controller="Home" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close closing_price_model closemodel2" title="Close Modal"> Remind me later</span>
+                    <h2>Pricing & Plans</h2>
+                </div>
+
+
+                <div class="container" style="text-align: left;">
+                    <div id="generic_price_table">
+                        <section style="padding:0px!important;">
+                            <div class="container price_container">
+
+                                <!--BLOCK ROW START-->
+                                <div class="row">
+                                    <div class="col-md-4">
+
+                                        <!--PRICE CONTENT START-->
+                                        <div class="generic_content clearfix">
+
+                                            <!--HEAD PRICE DETAIL START-->
+                                            <div class="generic_head_price clearfix">
+
+                                                <!--HEAD CONTENT START-->
+                                                <div class="generic_head_content clearfix">
+
+                                                    <!--HEAD START-->
+                                                    <div class="head_bg"></div>
+                                                    <div class="head">
+                                                        <span>Basic</span>
+                                                    </div>
+                                                    <!--//HEAD END-->
+
+                                                </div>
+                                                <!--//HEAD CONTENT END-->
+                                                <!--PRICE START-->
+                                                <div class="generic_price_tag clearfix">
+                                                    <span class="price">
+                                                        <span class="sign">$</span>
+                                                        <span class="currency">99</span>
+                                                        <span class="cent">.99</span>
+                                                        <span class="month">/MON</span>
+                                                    </span>
+                                                </div>
+                                                <!--//PRICE END-->
+
+                                            </div>
+                                            <!--//HEAD PRICE DETAIL END-->
+                                            <!--FEATURE LIST START-->
+                                            <div class="generic_feature_list">
+                                                <ul>
+                                                    <li><span>2GB</span> Bandwidth</li>
+                                                    <li><span>150GB</span> Storage</li>
+                                                    <li><span>12</span> Accounts</li>
+                                                    <li><span>24/7</span> Support</li>
+                                                </ul>
+                                            </div>
+                                            <!--//FEATURE LIST END-->
+                                            <!--BUTTON START-->
+                                            <div class="generic_price_btn clearfix">
+                                                <a class="" href="">Sign up</a>
+                                            </div>
+                                            <!--//BUTTON END-->
+
+                                        </div>
+                                        <!--//PRICE CONTENT END-->
+
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <!--PRICE CONTENT START-->
+                                        <div class="generic_content active clearfix">
+
+                                            <!--HEAD PRICE DETAIL START-->
+                                            <div class="generic_head_price clearfix">
+
+                                                <!--HEAD CONTENT START-->
+                                                <div class="generic_head_content clearfix">
+
+                                                    <!--HEAD START-->
+                                                    <div class="head_bg"></div>
+                                                    <div class="head">
+                                                        <span>Standard</span>
+                                                    </div>
+                                                    <!--//HEAD END-->
+
+                                                </div>
+                                                <!--//HEAD CONTENT END-->
+                                                <!--PRICE START-->
+                                                <div class="generic_price_tag clearfix">
+                                                    <span class="price">
+                                                        <span class="sign">$</span>
+                                                        <span class="currency">199</span>
+                                                        <span class="cent">.99</span>
+                                                        <span class="month">/MON</span>
+                                                    </span>
+                                                </div>
+                                                <!--//PRICE END-->
+
+                                            </div>
+                                            <!--//HEAD PRICE DETAIL END-->
+                                            <!--FEATURE LIST START-->
+                                            <div class="generic_feature_list">
+                                                <ul>
+                                                    <li><span>2GB</span> Bandwidth</li>
+                                                    <li><span>150GB</span> Storage</li>
+                                                    <li><span>12</span> Accounts</li>
+                                                    <li><span>24/7</span> Support</li>
+                                                </ul>
+                                            </div>
+                                            <!--//FEATURE LIST END-->
+                                            <!--BUTTON START-->
+                                            <div class="generic_price_btn clearfix">
+                                                <a class="" href="">Sign up</a>
+                                            </div>
+                                            <!--//BUTTON END-->
+
+                                        </div>
+                                        <!--//PRICE CONTENT END-->
+
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        <!--PRICE CONTENT START-->
+                                        <div class="generic_content clearfix">
+
+                                            <!--HEAD PRICE DETAIL START-->
+                                            <div class="generic_head_price clearfix">
+
+                                                <!--HEAD CONTENT START-->
+                                                <div class="generic_head_content clearfix">
+
+                                                    <!--HEAD START-->
+                                                    <div class="head_bg"></div>
+                                                    <div class="head">
+                                                        <span>Unlimited</span>
+                                                    </div>
+                                                    <!--//HEAD END-->
+
+                                                </div>
+                                                <!--//HEAD CONTENT END-->
+                                                <!--PRICE START-->
+                                                <div class="generic_price_tag clearfix">
+                                                    <span class="price">
+                                                        <span class="sign">$</span>
+                                                        <span class="currency">299</span>
+                                                        <span class="cent">.99</span>
+                                                        <span class="month">/MON</span>
+                                                    </span>
+                                                </div>
+                                                <!--//PRICE END-->
+
+                                            </div>
+                                            <!--//HEAD PRICE DETAIL END-->
+                                            <!--FEATURE LIST START-->
+                                            <div class="generic_feature_list">
+                                                <ul>
+                                                    <li><span>2GB</span> Bandwidth</li>
+                                                    <li><span>150GB</span> Storage</li>
+                                                    <li><span>12</span> Accounts</li>
+                                                    <li><span>24/7</span> Support</li>
+                                                </ul>
+                                            </div>
+                                            <!--//FEATURE LIST END-->
+                                            <!--BUTTON START-->
+                                            <div class="generic_price_btn clearfix">
+                                                <a class="" href="">Sign up</a>
+                                            </div>
+                                            <!--//BUTTON END-->
+
+                                        </div>
+                                        <!--//PRICE CONTENT END-->
+
+                                    </div>
+                                </div>
+                                <!--//BLOCK ROW END-->
+
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    // Get the modal
+    var modal1 = document.getElementById('id01');
+    var modal2 = document.getElementById('id02');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal1) {
+            modal.style.display = "none";
+        }
+        if (event.target == modal2) {
+            modal.style.display = "none";
+        }
+    }
+
+
+</script>

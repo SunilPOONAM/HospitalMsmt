@@ -1,0 +1,98 @@
+﻿@*@model Hospital.Models.SubAdmin.Nurse*@
+@model Hospital.Models.SubAdmin.NurseViewModel
+
+@{
+    ViewData["Title"] = "Add Birth Report";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+@section scripts{
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+}
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link rel="stylesheet" href="~/assets/css/form_wizard_css.css" />
+<style>
+    .btn.btn-danger.active:hover, .open > .btn.btn-danger.dropdown-toggle, .open > .btn.btn-danger.dropdown-toggle:focus, .open > .btn.btn-danger.dropdown-toggle:hover {
+        background-color: #ea236d !important;
+        color: #ea236d !important;
+    }
+</style>
+@Html.Raw(TempData["msg"])
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Birth Report</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Add Birth Report</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="form-group">
+                <i class="fa fa-id-card" aria-hidden="true"></i> <label> Patient ID</label>
+                <input type="text" class="form-control" placeholder="Enter Id" />
+            </div>
+        </div>
+
+        <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="form-group">
+                <i class="fa fa-calendar" aria-hidden="true"></i> <label> Date</label>
+                <input type="date" class="form-control" placeholder="Enter Id" />
+            </div>
+        </div>
+
+        <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="form-group">
+                <i class="fa fa-tags" aria-hidden="true"></i> <label> Title</label>
+                <input type="text" class="form-control" placeholder="Enter Id" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm col-md-12 col-lg-12  col-xl-12">
+            <div class="form-group">
+                <i class="fa fa-file" aria-hidden="true"></i> <label> Description</label>
+                <textarea rows="+4" class="form-control"> </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm col-md-12 col-lg-12  col-xl-12">
+            <div class="form-group label-floating">
+                <div class="form-group">
+                    <i class="fa fa-toggle-on" aria-hidden="true"></i>  <label>Status</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" value="Available" checked="" data-val="true" data-val-required="Please Enter Availiablity" name="Availiablity">
+                    <label class="form-check-label" for="docotr_available">
+                        Active
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" value="On Leave" name="Availiablity">
+                    <label class="form-check-label" for="doctor_onleave">
+                        Inactive
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm col-md-12 col-lg-12  col-xl-12">
+            <div class="form-group">
+                <button type="submit" class="btn btn-success"> Add Birth</button>
+                <button type="reset" class="btn btn-danger"> Reset</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

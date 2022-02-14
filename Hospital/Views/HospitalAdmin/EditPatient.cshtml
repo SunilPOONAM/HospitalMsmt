@@ -1,0 +1,208 @@
+﻿@model Hospital.Models.SubAdmin.Patients
+
+@{
+    ViewData["Title"] = "EditPatient";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Patient</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-120">
+            <h3 class="page-title page-title_main">Edit Patient</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-b-20">
+            <form asp-action="EditPatient">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="PatientID" />
+                <input type="hidden" asp-for="CreatedDate" class="form-control" />
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-wheelchair" aria-hidden="true"></i> <label asp-for="PatientName" class="control-label"></label>
+                            <input asp-for="PatientName" class="form-control" required />
+                            <span asp-validation-for="PatientName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-birthday-cake"></i>  <label asp-for="DOB" class="control-label"></label>
+                            <input type="date" asp-for="DOB" id="DOB" onkeydown="return false" onchange="ageCalculator();" class="form-control" required />
+                            <span asp-validation-for="DOB" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i> <label asp-for="Age" class="control-label"></label>
+                            <input asp-for="Age" class="form-control" id="result" readonly />
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-phone" aria-hidden="true"></i>  <label asp-for="Phone" class="control-label"></label>
+                            <input type="number" asp-for="Phone" min="0" class="form-control" required />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-venus" aria-hidden="true"></i>    <label class="display-inline">Gender</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input asp-for="Gender" class="form-check-input" type="radio" id="patient_male" value="Male" checked>
+                                <label class="form-check-label" for="patient_male">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="Gender" class="form-check-input" type="radio" id="patient_female" value="Female">
+                                <label class="form-check-label" for="patient_female">
+                                    Female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i> <label asp-for="Email" class="control-label"></label>
+                            <input type="email" asp-for="Email" class="form-control" required />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-road" aria-hidden="true"></i> <label asp-for="Street" class="control-label"></label>
+                            <input asp-for="Street" class="form-control" />
+                            <span asp-validation-for="Street" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-building-o" aria-hidden="true"></i> <label asp-for="CityId" class="control-label"></label>
+                            <select asp-for="CityId" asp-items="@(new SelectList(ViewData["Countries"]  as IEnumerable<CountryMaster>))" class="form-control" />
+                            <span asp-validation-for="CityId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-map" aria-hidden="true"></i>  <label asp-for="StateId" class="control-label"></label>
+                            <select asp-for="StateId" asp-items="@(new SelectList(ViewData["States"] as IEnumerable<StateMaster>,"Id","StateName"))" class="form-control" />
+                            <span asp-validation-for="StateId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>    <label asp-for="ZipCode" class="control-label"></label>
+                            <input type="number" asp-for="ZipCode" min="0" class="form-control" />
+                            <span asp-validation-for="ZipCode" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-globe" aria-hidden="true"></i> <label asp-for="CountryId" class="control-label"></label>
+                            <select asp-for="CountryId" class="form-control">
+                                <option value="" selected="selected">(Please select a country)</option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="AS">American Samoa</option>
+                                <option value="ZW">Zimbabwe</option>
+                            </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-toggle-on" aria-hidden="true"></i>  <label class="display-inline">Status</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input asp-for="IsActive" class="form-check-input" type="radio" id="Patient_Active" value="Active">
+                                <label class="form-check-label" for="Patient_Active">
+                                    Active
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="IsActive" class="form-check-input" type="radio" id="Patient_IsActive" value="IsActive" />
+                                <label class="form-check-label" for="Patient_IsActive">
+                                    IsActive
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="m-t-20 text-center">
+                    <button class="btn btn-success submit-btn">Save</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function ageCalculator() {
+        var userinput = document.getElementById("DOB").value;
+        var dob = new Date(userinput);
+        if (userinput == null || userinput == '') {
+            document.getElementById("message").innerHTML = "**Choose a date please!";
+            return false;
+        } else {
+
+            //calculate month difference from current date in time
+            var month_diff = Date.now() - dob.getTime();
+
+            //convert the calculated difference in date format
+            var age_dt = new Date(month_diff);
+
+            //extract year from date
+            var year = age_dt.getUTCFullYear();
+
+            //now calculate the age of the user
+            var age = Math.abs(year - 1970);
+
+            //display the calculated age
+            return $("#result").val(age);
+        }
+    }
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("DOB").setAttribute("max", today);
+</script>
+
+

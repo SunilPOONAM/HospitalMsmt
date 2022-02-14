@@ -1,0 +1,190 @@
+﻿@using Hospital.Models
+@model Hospital.Models.Contactus
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<style>
+    .error_msg {
+        font-size: smaller;
+    }
+    section {
+        padding-top: 150px !important;
+    }
+    /*plans tiles*/
+
+    .btn.disabled, .btn:disabled {
+        opacity: .65;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    .col-md-6, .col-lg-6, .col-xl-6 {
+        width: 50%;
+        float: left;
+        padding: 5px
+    }
+
+    .col-md-12, .col-lg-12, .col-xl-12 {
+        padding: 5px
+    }
+
+    .contactlist {
+        list-style: none;
+    line-height: 60px;
+    margin-top: 20px;
+    }
+
+    .aboutcontact {
+        font-size: small;
+    color: whitesmoke;
+    font-family: system-ui;
+    }
+   @@media(min-width:768px){
+    .col-md-5 {
+        width: 50%;
+        float: left;
+    }
+
+    .contat_details {
+        background-color: #086972;
+        padding: 86px;
+        position: relative;
+        left: -70px;
+        margin: 24px;
+    }
+
+    .contact_us_form {
+        padding: 65px;
+    }
+
+    .main_block {
+        background-color: #d8d6d6;
+    }
+
+        .main_block label {
+            color: black;
+        }
+   }
+    @@media(max-width:768px){
+         .col-md-5{
+        width:100%!important;
+        float:none!important;
+         }
+        .main_block {
+            margin: 0px !important;
+            border: 1px solid white;
+        }
+        .main_row {
+            padding: 10px!important;
+        }
+    }
+  
+</style>
+
+@Html.Raw(TempData["msg"])
+
+<header id="Home">
+
+    @Html.Partial("_HeaderPartial")
+
+    <section class="section-testimonials" id="Signin" style="padding-bottom: 70px;">
+        <div class="row">
+            <h2>Contact-Us</h2>
+        </div>
+        <div class="row main_block">
+            <div class="main_row" style="margin-bottom: 70px;">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                        <div class="contat_details">
+                            <h3>Contact Information</h3>
+
+                            <p class="aboutcontact">Fill up the form and our Team will get back to you within 24 hours.</p>
+                            <ul class="contactlist">
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp; +0123 4567 8910</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp; hello@nextolive.com</li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true">&nbsp;&nbsp; 102 street 2714 Don</i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                        <div class="contact_us_form">
+                            <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                                @*<div asp-validation-summary="All" class="text-danger validate_text"></div>*@
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="form-group" data-aos="fade-right">
+                                            <i class="fa fa-user-secret" style="color:black" aria-hidden="true"></i> <label asp-for="Name" class="control-label" style="font-weight: inherit; "></label>  <span asp-validation-for="Name" class="text-danger validate_text error_msg"></span>
+                                            <input asp-for="Name" class="form-control" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="form-group" data-aos="fade-left">
+                                            <i class="fa fa-envelope" style="color:black" aria-hidden="true"></i>  <label asp-for="Email" class="control-label" style=" font-weight: inherit;"></label>  <span asp-validation-for="Email" class="text-danger validate_text error_msg"></span>
+                                            <input asp-for="Email" class="form-control" />
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="form-group">
+                                            <i class="fa fa-commenting" style="color:black" aria-hidden="true"></i> <label asp-for="Message" class="control-label" style=" font-weight: inherit;"></label>  <span asp-validation-for="Message" class="text-danger validate_text error_msg"></span>
+                                            <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!---test-->
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    @Html.Partial("_FooterPartial")
+
+
+</header>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

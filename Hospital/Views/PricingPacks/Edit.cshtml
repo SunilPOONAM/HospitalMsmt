@@ -1,0 +1,68 @@
+﻿@model Hospital.Models.PricingPacks
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Pricing Packages</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <form asp-action="Edit">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <input type="hidden" asp-for="id" />
+                        <div class="form-group">
+                            <i class="fa fa-tasks" aria-hidden="true"></i>  <label asp-for="PlanName" class="control-label"></label>
+                            <input type="text" required asp-for="PlanName" class="form-control" />
+                            <span asp-validation-for="PlanName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-clock-o"></i> <label asp-for="BillingPeroid" class="control-label"></label>
+                            <input type="text" required asp-for="BillingPeroid" class="form-control" />
+                            <span asp-validation-for="BillingPeroid" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="form-group">
+                            <i class="fa fa-money" aria-hidden="true"></i>  <label asp-for="Amount" class="control-label"></label>
+                            <input type="number" min="0" required asp-for="Amount" class="form-control" />
+                            <span asp-validation-for="Amount" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>  <label asp-for="Description" class="control-label"></label>
+                            <textarea rows="+5" type="text" required asp-for="Description" class="form-control" > </textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+            <label asp-for="CreateDate" class="control-label"></label>
+            <input type="date" required asp-for="CreateDate" class="form-control" />
+            <span asp-validation-for="CreateDate" class="text-danger"></span>
+        </div>*@
+                </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-success submit-btn">Save</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

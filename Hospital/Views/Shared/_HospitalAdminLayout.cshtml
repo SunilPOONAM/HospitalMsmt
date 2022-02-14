@@ -1,0 +1,322 @@
+﻿@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@using Microsoft.AspNetCore.Http;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png" />
+    <title>HospitalAdmin</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+    <style>
+        .main-footer {
+            background-color: #086972 !important;
+            color: white !important;
+        }
+
+        .user-menu .dropdown-menu {
+            min-width: 230px !important;
+        }
+
+        .dropdown-item {
+            background-color: lightgray !important;
+        }
+
+        /*.submenu a:hover, .menu a:hover {
+            background: #086972;
+             color:#fff !important;
+        }*/
+
+    </style>
+    <environment names="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    </environment>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    @*DataTable JS*@
+    <script src="~/admin/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="~/admin/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    @RenderSection("Head", false)
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    @*Sweet alert CDN*@
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <div class="header" style="background-color: #086972">
+            <div class="header-left">
+                <a href="~/HospitalAdmin/Index" class="logo">
+                    <img src="~/assets/img/logo-2.png" width="35" height="30" alt=""> <span>HospitalAdmin</span>
+                </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <ul class="nav user-menu float-right">
+
+                <System.Security.Claims.Claim>
+
+                    <li class="nav-item dropdown has-arrow">
+                        <a href="#" class="dropdown-toggle nav-link user-link hospital_admin" data-toggle="dropdown">
+                            <span class="user-img">
+                                <img class="rounded-circle" src="~/assets/img/user.jpg" width="24" alt="Admin">
+                                <span class="status online circle_shape"></span>
+                            </span>
+                            <span class="Username">@User.Identity.Name</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <form class="dropdown-item" method="post" asp-controller="Account" asp-action="Logout" style="left:95px;">
+                                <Center><input type="submit" class="btn btn-secondary" value="Logout" /></Center>
+                            </form>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        @*<li class="menu-title">Main</li>*@
+                        <li class="menu">
+                            <a href="@Url.Action("Index", "Home")"> <i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a>
+                        </li>
+                        <li class="menu">
+                            <a href="~/HospitalAdmin/Index"><i class="fa fa-tachometer" aria-hidden="true"></i> <span>Dashboard</span></a>
+                        </li>
+
+                        @*<li class="submenu">
+            <a href="~/Account/Login"><i class="fa fa-user"></i><span>Roles </span><span class="menu-arrow"></span></a>
+            <ul style="display:none;">
+                <li><a href="~/Doctor/Index">Doctors</a></li>
+                <li><a href="~/Nurses/Index">Nurses</a></li>
+                <li><a href="#">Staff</a></li>
+            </ul>
+        </li>*@
+                        @{
+
+                            if (!string.IsNullOrEmpty(Context.Session.GetString("CurrentRole")))
+                            {
+                                if (Context.Session.GetString("CurrentRole").Equals("HospitalAdmin"))
+                                {
+                                    <li class="submenu">
+                                        <a href="~/HospitalAdmin/StaffList"><i class="fa fa-user-md"></i> <span>Staff</span><span class="menu-arrow"></span></a>
+                                        <ul style="display: none;">
+                                            <li><a href="~/HospitalAdmin/AddStaff">Add Staff</a></li>
+                                            <li><a href="~/HospitalAdmin/StaffList">All Staff</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="~/HospitalAdmin/DoctorList"><i class="fa fa-user-md"></i> <span>Doctors</span><span class="menu-arrow"></span></a>
+                                        <ul style="display: none;">
+                                            <li><a href="~/HospitalAdmin/AddDoctor">Add Doctors</a></li>
+                                            <li><a href="~/HospitalAdmin/DoctorList">All Doctors</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="~/HospitalAdmin/NurseList"><i class="fa fa-user-plus"></i><span>Nurses</span><span class="menu-arrow"></span></a>
+                                        <ul style="display: none;">
+                                            <li><a href="~/HospitalAdmin/AddNurse">Add Nurse</a></li>
+                                            <li><a href="~/HospitalAdmin/NurseList">All Nurse</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="~/HospitalAdmin/PatientList"><i class="fa fa-wheelchair"></i> <span>Patients</span><span class="menu-arrow"></span></a>
+                                        <ul>
+                                            <li><a href="~/HospitalAdmin/AddPatient">Add OPD Patient</a></li>
+                                            <li><a asp-action="Hostpitalpatients" asp-controller="HospitalAdmin">Manage OPD Patient</a></li>
+                                            @*<li><a asp-action="PatientList" asp-controller="HospitalAdmin"> Patients</a></li>*@
+                                            <li>@*<a asp-action="CreatePatient" asp-controller="HospitalAdmin">Create Patient</a>*@</li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="~/HospitalAdmin/AppointmentList"><i class="fa fa-calendar"></i> <span> Appointments </span> <span class="menu-arrow"></span></a>
+                                        <ul style="display: none;">
+                                            @*<li><a href="~/HospitalAdmin/AddAppointment">Add Appointment</a></li>*@
+                                            <li><a href="~/HospitalAdmin/AppointmentList">All Appointments</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu">
+                                        <a href="~/HospitalAdmin/DepartmentList"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="~/HospitalAdmin/AllotmentList"><i class="fa fa-bed"></i> <span> Room Allotments </span> <span class="menu-arrow"></span></a>
+                                        <ul style="display: none;">
+                                            @*<li><a href="~/HospitalAdmin/AddAllotment">Add Room Allotments</a></li>*@
+                                            <li><a href="~/HospitalAdmin/AllotmentList">Allotments List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="~/HospitalAdmin/ScheduleList"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span><span class="menu-arrow"></span></a>
+                                        <ul style="display: none;">
+                                            <li><a href="~/HospitalAdmin/AddSchedule">Add Doctor Schedules</a></li>
+                                            <li><a href="~/HospitalAdmin/ScheduleList">Doctor Schedules List</a></li>
+                                        </ul>
+                                    </li>
+                                }
+                                else if (Context.Session.GetString("CurrentRole").Equals("StaffMember"))
+                                {
+                                    var modelData = Context.Session.GetString("MenuControl");
+                                    if (modelData.Contains("Doctor"))
+                                    {
+                                        <li class="submenu">
+                                            <a href="~/HospitalAdmin/DoctorList"><i class="fa fa-user-md"></i> <span>Doctors</span><span class="menu-arrow"></span></a>
+                                            <ul style=" display: none;">
+                                                <li><a href="~/HospitalAdmin/AddDoctor">Add Doctors</a></li>
+                                                <li><a href="~/HospitalAdmin/DoctorList">All Doctors</a></li>
+
+                                            </ul>
+                                        </li>
+                                    }
+                                    if (modelData.Contains("Nurse"))
+                                    {
+                                        <li class="submenu">
+                                            <a href="~/HospitalAdmin/NurseList"><i class="fa fa-user-plus"></i><span>Nurses</span><span class="menu-arrow"></span></a>
+                                            <ul style="display: none;">
+                                                <li><a href="~/HospitalAdmin/AddNurse">Add Nurse</a></li>
+                                                <li><a href="~/HospitalAdmin/NurseList">All Nurse</a></li>
+
+                                            </ul>
+                                        </li>
+                                    }
+                                    if (modelData.Contains("Appointments"))
+                                    {
+                                        <li class="submenu">
+                                            <a href="~/HospitalAdmin/AppointmentList"><i class="fa fa-calendar"></i> <span> Appointments </span> <span class="menu-arrow"></span></a>
+                                            <ul style="display: none;">
+                                                @*<li><a href="~/HospitalAdmin/AddAppointment">Add Appointment</a></li>*@
+                                                <li><a href="~/HospitalAdmin/AppointmentList">All Appointments</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    if (modelData.Contains("Department"))
+                                    {
+                                        <li class="Department">
+                                            <a href="~/HospitalAdmin/DepartmentList"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
+                                        </li>
+                                    }
+                                    if (modelData.Contains("Room Allotment"))
+                                    {
+                                        <li class="submenu">
+                                            <a href="~/HospitalAdmin/AllotmentList"><i class="fa fa-bed"></i> <span> Room Allotments </span> <span class="menu-arrow"></span></a>
+                                            <ul style="display: none;">
+                                                @*<li><a href="~/HospitalAdmin/AddAllotment">Add Room Allotments</a></li>*@
+                                                <li><a href="~/HospitalAdmin/AllotmentList">Allotments List</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    if (modelData.Contains("Doctor Schedule"))
+                                    {
+                                        <li class="submenu">
+                                            <a href="~/HospitalAdmin/ScheduleList"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span><span class="menu-arrow"></span></a>
+                                            <ul style="display: none;">
+                                                <li><a href="~/HospitalAdmin/AddSchedule">Add Doctor Schedules</a></li>
+                                                <li><a href="~/HospitalAdmin/ScheduleList">Doctor Schedules List</a></li>
+                                            </ul>
+                                        </li>
+
+                                    }
+                                }
+                            }
+                        }
+
+                        <li class="submenu">
+                            <a href="~/HospitalAdmin/ScheduleList"><i class="fa fa-building" aria-hidden="true"></i> <span>Hospital Activities</span><span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="~/HospitalAdmin/Add_Birth_Report">Add Birth Report</a></li>
+                                <li><a href="~/HospitalAdmin/Birth_Report_List">Birth Report List</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-money"></i> <span> Payment </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="~/HospitalAdmin/Payment">Payment Detail</a></li>
+                                <li><a href="#">Cashier</a></li>
+                                @*<li><a href="#">Taxes</a></li>*@
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="#">Invoices</a></li>
+                                <li><a href="#">Payment</a></li>
+                                <li><a href="#">Taxes</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a asp-action="chat" asp-controller="HospitalAdmin"><i class="fa fa-comments"></i><span>Chats</span></a>
+                        </li>
+                        <li class="menu">
+                            <a href="/Account/PlanSubscription"><i class="fa fa-list"></i> <span>Plan & Subscription</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-gears"></i> <span> Setting </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="~/HospitalAdmin/ResetPassword">Reset Password</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="menu">
+                            <a href="#"><i class="fa fa-life-ring"></i> <span>Help & Support</span></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            @RenderBody()
+        </div>
+
+        <footer class="main-footer">
+            <div class="hidden-xs">
+                <center>  Copyright © @DateTime.Now.Year All rights reserved  </center>
+            </div>
+        </footer>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    @*<script src="/assets/js/jquery-3.2.1.min.js"></script>*@
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.slimscroll.js"></script>
+    <script src="/assets/js/Chart.bundle.js"></script>
+    <script src="/assets/js/chart.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script>
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 1500,
+                seasing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+      
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

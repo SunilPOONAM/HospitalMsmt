@@ -1,0 +1,78 @@
+﻿@model Hospital.Models.SubAdmin.Schedule
+
+@{
+    ViewData["Title"] = "ScheduleDetails";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h4 class="page-title page-title_main">Schedules Details</h4>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Widget Item -->
+            <div class="col-md-12">
+                <div class="widget-area-2 proclinic-box-shadow">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                                <tr>
+                                    <td><h4> @Html.DisplayNameFor(model => model.Doctor)</h4></td>
+                                    <td>  @Html.DisplayFor(model => model.Doctor)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4> @Html.DisplayNameFor(model => model.AvailableStartDay)</h4></td>
+                                    <td>  @Html.DisplayFor(model => model.AvailableStartDay)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>  @Html.DisplayNameFor(model => model.AvailableEndDay)</h4> </td>
+                                    <td>   @Html.DisplayFor(model => model.AvailableEndDay)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4> @Html.DisplayNameFor(model => model.AvailableStartTime)</h4></td>
+                                    <td>  @Html.DisplayFor(model => model.AvailableStartTime)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>  @Html.DisplayNameFor(model => model.AvailableEndTime)</h4></td>
+                                    <td>@Html.DisplayFor(model => model.AvailableEndTime)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4> @Html.DisplayNameFor(model => model.TimePerPatient)</h4></td>
+                                    <td>  @Html.DisplayFor(model => model.TimePerPatient)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>  @Html.DisplayNameFor(model => model.Status)</h4></td>
+                                    <td>  @Html.DisplayFor(model => model.Status)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination export-pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fa fa-download "></i> csv</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fa fa-printer"></i> print</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fa fa-file"></i> PDF</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fa fa-align-justify "></i> Excel</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div>
+                            <a asp-action="EditSchedule" asp-route-id="@Model.Id" class="btn btn-success mb-3"><i class="fa fa-pencil m-r-5"></i>Edit Schedule</a>
+                            <a class="btn btn-danger mb-3" asp-controller="Doctor" asp-action="OnPostDelete" asp-route-id="@Model.Id" onclick="return confirm('Are you sure want to delete this Schedule ?')"><i class="fa fa-trash-o m-r-5"></i> Delete Schedule</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

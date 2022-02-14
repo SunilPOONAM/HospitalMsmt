@@ -1,0 +1,157 @@
+﻿@model Hospital.Models.PatientCaseStudy
+@{
+    ViewData["Title"] = "PatientCaseStudyListDetails";
+    Layout = "~/Views/Shared/_NursesLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">View  Patient Case Study Details</h4>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Widget Item -->
+        <div class="col-md-12">
+            <div class="widget-area-2 proclinic-box-shadow">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+
+                            @*<tr>
+            <td> <h4> @Html.DisplayNameFor(model => model.Id)</h4>  </td>
+            <td> @Html.DisplayFor(model => model.Id)</td>
+        </tr>*@
+
+                            @*<tr>
+            <td> <h4> @Html.DisplayNameFor(model => model.HospitalId)</h4>  </td>
+            <td> @Html.DisplayFor(model => model.HospitalId)</td>
+        </tr>
+
+        <tr>
+            <td> <h4> @Html.DisplayNameFor(model => model.DoctorId_Or_NurseId)</h4>  </td>
+            <td> @Html.DisplayFor(model => model.DoctorId_Or_NurseId)</td>
+        </tr>*@
+
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.patientId)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.patientId)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.Hospital_Name)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.Hospital_Name)</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                        <h4>
+                                             Nurse Name
+                                        </h4>
+                                                                                    
+                                    </td>
+                                <td> @Html.DisplayFor(model => model.Doctor_Nurse_Name)</td>
+                            </tr>
+
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.FoodAllergies)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.FoodAllergies)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.TendencyBleed)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.TendencyBleed)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.HeartDisease)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.HeartDisease)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.HighBloodPressure)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.HighBloodPressure)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.Diabetic)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.Diabetic)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.Surgery)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.Surgery)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.Accident)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.Accident)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.Others)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.Others)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.FamilyMedicalHistory)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.FamilyMedicalHistory)</td>
+                            </tr>
+
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.CurrentMedication)</h4>  </td>
+                                <td> @Html.DisplayFor(model => model.CurrentMedication)</td>
+                            </tr>
+
+                            <tr>
+                                <td><h4>   @Html.DisplayNameFor(model => model.FemalePregnancy)</h4> </td>
+                                <td> @Html.DisplayFor(model => model.FemalePregnancy) </td>
+                            </tr>
+
+
+                            <tr>
+                                <td><h4>   @Html.DisplayNameFor(model => model.BreastFeeding)</h4> </td>
+                                <td> @Html.DisplayFor(model => model.BreastFeeding) </td>
+                            </tr>
+
+                            <tr>
+                                <td><h4>   @Html.DisplayNameFor(model => model.HealthInsurance)</h4> </td>
+                                <td> @Html.DisplayFor(model => model.HealthInsurance) </td>
+                            </tr>
+
+                            <tr>
+                                <td><h4>   @Html.DisplayNameFor(model => model.LowIncome)</h4> </td>
+                                <td> @Html.DisplayFor(model => model.LowIncome) </td>
+                            </tr>
+
+                            <tr>
+                                <td><h4>   @Html.DisplayNameFor(model => model.Reference)</h4> </td>
+                                <td> @Html.DisplayFor(model => model.Reference) </td>
+                            </tr>
+                            <tr>
+                                <td><h4>   @Html.DisplayNameFor(model => model.Status)</h4> </td>
+                                <td> @Html.DisplayFor(model => model.Status) </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="m-t-20 text-center">
+                        <button type="submit" class="btn btn-success submit-btn"> <a href="/Nurses/PatientCaseStudyList">Go Back</a></button>
+                    </div>
+                    <br />
+                    @*<nav aria-label="Page navigation example">
+            <ul class="pagination export-pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#"><span class="fa fa-download "></span> csv</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#"><span class="fa fa-printer"></span> print</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#"><span class="fa fa-file "></span> PDF</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#"><span class="fa fa-align-justify "></span> Excel</a>
+                </li>
+            </ul>
+        </nav>*@
+                    @*<div>
+            <a asp-action="EditAllotment" asp-route-id="@Model.AllotmentId" class="btn btn-success mb-3"><i class="fa fa-pencil m-r-5"></i>Edit Allotment</a>
+            <a class="btn btn-success mb-3" asp-controller="Nurses" asp-action="AllotmentDelete" asp-route-id="@Model.AllotmentId" onclick="return confirm('Are you sure want to delete this room allotment ?')"><i class="fa fa-trash-o m-r-5"></i> Delete Allotment</a>
+
+        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,221 @@
+﻿
+@model Hospital.Models.AccountViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .error_msg {
+        font-size: smaller;
+    }
+    @@media(max-width:768px){
+        .modal-dialog {
+            width: 100%!important;
+        }
+    }
+    .modal-dialog {
+        width: 100%!important;
+    }
+    .servis {
+        width: 285px;
+        text-align: center;
+        box-shadow: 0px 0px 5px 5px;
+        background-color: aqua;
+        float: left;
+        margin: 20px;
+    }
+
+    .head {
+        height: 50px;
+        background-color: beige;
+        font-size: 35px;
+    }
+
+    .desc {
+        height: auto;
+        font-size: 20px;
+    }
+
+    .price {
+        background-color: azure;
+    }
+    /*plans tiles*/
+    .block.block-bordered {
+        border: 1px solid #e6ebf4;
+        box-shadow: none;
+    }
+
+    .block-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: .75rem 1.25rem;
+        transition: opacity .25s ease-out;
+    }
+
+    .bg-body-light {
+        background-color: #f9fafc !important;
+        padding-bottom: 20px;
+    }
+
+    .block-content {
+        transition: opacity .25s ease-out;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.25rem 1.25rem 1px;
+        overflow-x: visible;
+    }
+
+    .bg-body-light {
+        background-color: #f9fafc !important;
+        padding-bottom: 20px;
+    }
+
+    .btn-hero-secondary.disabled, .btn-hero-secondary:disabled {
+        color: #fff;
+        background-color: #111;
+    }
+
+    .btn.disabled, .btn:disabled {
+        opacity: .65;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    .col-md-6, .col-lg-6, .col-xl-6 {
+        width: 50%;
+        float: left;
+        padding: 5px
+    }
+
+    .col-md-12, .col-lg-12, .col-xl-12 {
+        padding: 5px
+    }
+</style>
+
+@Html.Raw(TempData["msg"])
+
+<header id="Home">
+
+    @Html.Partial("_HeaderPartial")
+
+    <section class="section-testimonials" id="Signin">
+        <div class="row">
+            <h2>Sign Up</h2>
+        </div>
+        <div class="row">
+            <div class="main_row" style="margin-bottom: 70px;">
+                <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                    @*<div asp-validation-summary="All" class="text-danger validate_text"></div>*@
+                    <hr />
+                    <div class="col-md-6" style="padding-top: 10px;">
+                        <img src="~/assets/img/signup_img.jpg" style="width:100%;border:5px solid white;" />
+                    </div>
+                    <div class="col-md-6" style="padding-top: 15px;">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group" data-aos="fade-right">
+                                    <label asp-for="FirstName" class="control-label" style=" font-weight: inherit;"></label> <span asp-validation-for="FirstName" class="text-danger validate_text error_msg"></span>
+                                    <input asp-for="FirstName" class="form-control" />
+                                </div>
+                               
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group" data-aos="fade-left">
+                                    <label asp-for="LastName" class="control-label" style=" font-weight: inherit;"></label> <span asp-validation-for="LastName" class="text-danger validate_text error_msg"></span>
+                                    <input asp-for="LastName" class="form-control" />
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="form-group" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                                    <label asp-for="Email" class="control-label" style=" font-weight: inherit;"></label> <span asp-validation-for="Email" class="text-danger validate_text error_msg"></span>
+                                    <input asp-for="Email" class="form-control" />
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group" data-aos="fade-right">
+                                    <label asp-for="Password" class="control-label" style=" font-weight: inherit; "></label>  <span asp-validation-for="Password" class="text-danger validate_text error_msg"></span>
+                                    <input asp-for="Password" class="form-control" />
+                                </div>
+                              
+
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group" data-aos="fade-left">
+                                    <label asp-for="ConfirmPassword" class="control-label" style=" font-weight: inherit;"></label>
+                                    <input asp-for="ConfirmPassword" class="form-control" />
+                                </div>
+                                <span asp-validation-for="ConfirmPassword" class="text-danger validate_text"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success">Register</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!---test-->
+                </form>
+
+            </div>
+
+        </div>
+        <hr />  <br />
+    </section>
+  
+    <p id="modelvalue" style="display:none;">@ViewBag.openMedel</p>
+
+    @Html.Partial("_FooterPartial")
+
+
+</header>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        
+        var data = document.getElementById("modelvalue").innerHTML;
+        if (data == "1") {
+            $("#id01").show();
+        }
+    });
+
+</script>

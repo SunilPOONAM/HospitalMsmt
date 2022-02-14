@@ -1,0 +1,391 @@
+﻿@model Hospital.Collection.collectionofall
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+    @@media(max-width:768px) {
+        .chart_column {
+            width: 100% !important;
+        }
+    }
+
+    @@media(max-width:768px) {
+        #piechart {
+            position: relative;
+            left: -80px;
+        }
+    }
+
+    @@media(min-width:768px) {
+        .chart_column {
+            width: 48% !important;
+        }
+
+        .week_record {
+            position: relative;
+            top: -28px;
+        }
+    }
+
+    @@media(min-width:768px) {
+        .chart_column {
+            width: 48% !important;
+        }
+    }
+
+    .table_order {
+        height: 162px;
+    }
+
+    .text-center {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .img-responsive_widget {
+        width: 50px;
+        margin-top: -10px;
+    }
+
+    .widget_text {
+        color: #086972;
+        font-size: 12px;
+        margin-right: 20px;
+    }
+
+    .dash-widget-info {
+        float: right;
+        position: absolute;
+        right: 0px;
+        top: 5px;
+    }
+
+    .dash-widget_block {
+        height: 100px;
+        background-color: #fff;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        padding: 15px;
+        position: relative;
+        box-shadow: 1px 2px 5px 0px !important;
+        border: 1px solid #d2d2d2 !important;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .dash-widget-bg1 {
+        width: 65px;
+        float: left;
+        color: #fff;
+        display: block;
+        font-size: 50px;
+        text-align: center;
+        line-height: 65px;
+        background: #009efb;
+        border-radius: 50%;
+        font-size: 40px;
+        height: 65px;
+    }
+
+    .col {
+        width: 12.5%;
+    }
+
+    .img-responsive1 {
+        width: 50px;
+        border-radius: 25px;
+        padding: 5px;
+    }
+
+    .img-responsive_profile {
+        width: 50px;
+        border-radius: 25px;
+        padding: 5px;
+    }
+
+    .dash-widget-info > h3 {
+        text-align: center;
+    }
+
+    .img-profile {
+        width: 70px;
+    }
+
+    table tr {
+        background-color: white;
+    }
+</style>
+
+<body id="bdy">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item "> <center> <a href="/HospitalAdmin/index" class="text-center">Super Admin</a> </center></li>
+        </ol>
+    </nav>
+
+    <div class="content dashboard_hospital">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script>
+            document.getElementById("bdy").onload = function () { myFunction() };
+
+            function myFunction() {
+                toastr.success('Login Successful');
+            }
+        </script>
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+                <div class="dash-widget">
+                    <span class="widgets">
+                        <img src="~/assets/img/widget-1.png" class="img-responsive_widget" />
+                    </span>
+                    <div class="dash-widget-info">
+                        <h3>@ViewBag.TotalDoctor.Count</h3>
+                        <span class="widget_text" style="background-color: #009efa;padding: 5px;border-radius: 5px;color: white;font-weight: 500;">Active Doctors</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+                <div class="dash-widget">
+                    <span class="widgets">
+                        <img src="~/assets/img/widget-2.png" class="img-responsive_widget" />
+                    </span>
+                    <div class="dash-widget-info">
+                        <h3>@*@ViewBag.TotalNumberOfNurse.Count*@</h3>
+                        <span class="widget_text" style="background-color: #4bd256;padding: 5px;border-radius: 5px;color: white;font-weight: 500;">Active Nurses</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+                <div class="dash-widget">
+                    <span class="widgets">
+                        <img src="~/assets/img/widget-3.png" class="img-responsive_widget" />
+                    </span>
+                    <div class="dash-widget-info">
+                        <h3>@ViewBag.Patients.Count</h3>
+                        <span class="widget_text" style="background-color: #7b92a4;padding: 5px;border-radius: 5px;color: white;font-weight: 500;">Active Patients</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+                <div class="dash-widget">
+                    <span class="widgets">
+                        <img src="~/assets/img/widget-4.png" class="img-responsive_widget" />
+                    </span>
+                    <div class="dash-widget-info">
+                        <h3>7</h3>
+                        <span class="widget_text" style="background-color: #ffba39;padding: 5px;border-radius: 5px;color: white;font-weight: 500;">Empty Beds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-xs-12 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+                <div class="dash-widget">
+                    <span class="widgets">
+                        <img src="~/assets/img/widget-5.png" class="img-responsive_widget" />
+                    </span>
+                    <div class="dash-widget-info">
+                        <h3>6</h3>
+                        <span class="widget_text" style="background-color: #4bd256;padding: 5px;border-radius: 5px;color: white;font-weight: 500;">Total Operations</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+                <div class="dash-widget">
+                    <span class="widgets">
+                        <img src="~/assets/img/widget-6.png" class="img-responsive_widget" />
+                    </span>
+                    <div class="dash-widget-info">
+                        <h3>5</h3>
+                        <span class="widget_text" style="background-color: #ffba39;padding: 5px;border-radius: 5px;color: white;font-weight: 500;">Pharmastist</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+                <div class="dash-widget">
+                    <span class="widgets">
+                        <img src="~/assets/img/widget-7.png" class="img-responsive_widget" />
+                    </span>
+                    <div class="dash-widget-info">
+                        <h3>4</h3>
+                        <span class="widget_text" style="background-color: #009efa;padding: 5px;border-radius: 5px;color: white;font-weight: 500;">Laboratorist</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+                <div class="dash-widget">
+                    <span class="widgets">
+                        <img src="~/assets/img/widget-8.png" class="img-responsive_widget" />
+                    </span>
+                    <div class="dash-widget-info">
+                        <h3>3</h3>
+                        <span class="widget_text" style="background-color: #7b92a4;padding: 5px;border-radius: 5px;color: white;font-weight: 500;">Accounts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--widthgets row end-->
+        <!-- only icons widgets row-->
+        <!-- icons row end-->
+        <!-- charts row started--><br />
+        <div class="row" style="background-color: #086972; color: white; padding-top: 5px; margin: 0px;">
+            <div class="col-md-6">
+                <h3> Visitors by Country</h3>
+            </div>
+            <div class="col-md-6">
+                <h3> Another Chart</h3>
+            </div>
+        </div>
+        <div class="row" style="background-color: white; width: 100%; margin: auto; box-shadow: 1px 2px 5px 0px !important;border-radius:05px;">
+            <div class="col-md-6 chart_column" style="width:500px;">
+                <div class="chart_1">
+                    <div id="piechart"></div>
+                </div>
+            </div>
+            <div class="col-md-6 chart_column">
+                <div class="chart_2">
+                    <div id="myPlot" style="width:100%;max-width:700px"></div>
+                </div>
+            </div>
+        </div>
+        <!--table row in orders--><br />
+        <div class="row">
+            <div class="col-md-6">
+                <h3> Latest Orders</h3>
+                <span style="float:right;color:#086972;font-weight:900;" class="week_record">Last Week </span>
+                <div class="orders-block table-responsive">
+                    <table class="table_order">
+                        <thead>
+                            <tr>
+                                <th> ID</th>
+                                <th> Customer</th>
+                                <th> Status</th>
+                                <th> Date Added</th>
+                                <th> Total</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>354 </td>
+                                <td>Daniel Gibson </td>
+                                <td style="color:red;">Ongoing </td>
+                                <td>04-11-2018 </td>
+                                <td>$420.40 </td>
+                                <td><i class="fa fa-edit" style="color:green;"></i> | <i class="fa fa-trash-o" style="color:red;"></i> </td>
+
+                            </tr>
+                            <tr style="border-bottom: 5px solid lightgray;"> </tr>
+                            <tr>
+                                <td>735</td>
+                                <td>Corner Roberson </td>
+                                <td style="color:green;">Complete </td>
+                                <td>04-11-2018 </td>
+                                <td>$420.40 </td>
+                                <td><i class="fa fa-edit" style="color:green;"></i> | <i class="fa fa-trash-o" style="color:red;"></i> </td>
+                            </tr>
+                            <tr style="border-bottom: 5px solid lightgray;"> </tr>
+                            <tr>
+                                <td>132 </td>
+                                <td>Seth Weber </td>
+                                <td style="color:deeppink;">Review </td>
+                                <td>04-11-2018 </td>
+                                <td>$420.40 </td>
+                                <td><i class="fa fa-edit" style="color:green;"></i> | <i class="fa fa-trash-o" style="color:red;"></i> </td>
+
+                            </tr>
+                            <tr style="border-bottom: 5px solid lightgray;"> </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3> Users</h3>
+                <span style="float:right;color:#086972;font-weight:900;" class="week_record">This Month </span>
+                <div class="users-block table-responsive">
+                    <table class="table_user">
+                        <thead>
+                            <tr>
+                                <th style="width:50px"> User Profile</th>
+                                <th> Name</th>
+                                <th> Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:50px"><img src="~/assets/img/user-03.jpg" class="img-responsive_profile" /> </td>
+                                <td>Daniel Gibson </td>
+                                <td style="color:forestgreen">Online </td>
+
+                            </tr>
+                            <tr>
+                                <td style="width:50px"><img src="~/assets/img/user-04.jpg" class="img-responsive_profile" /> </td>
+                                <td>Corner Roberson </td>
+                                <td style="color:red">Offline </td>
+
+                            </tr>
+                            <tr>
+                                <td style="width:50px"><img src="~/assets/img/user-05.jpg" class="img-responsive_profile" /> </td>
+                                <td>Seth Weber </td>
+                                <td style="color:forestgreen">online </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Draw the chart and set the chart values
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work', 8],
+            ['Eat', 2],
+            ['TV', 4],
+            ['Gym', 2],
+            ['Sleep', 8]
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = { 'title': 'My Average Day', 'width': 550, 'height': 400 };
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+    }
+</script>
+<script>
+    var exp = "Math.sin(x)";
+
+    // Generate values
+    var xValues = [];
+    var yValues = [];
+    for (var x = 0; x <= 10; x += 0.1) {
+        xValues.push(x);
+        yValues.push(eval(exp));
+    }
+
+    // Display using Plotly
+    var data = [{ x: xValues, y: yValues, mode: "lines" }];
+    var layout = { title: "y = " + exp };
+    Plotly.newPlot("myPlot", data, layout);
+</script>
+
+

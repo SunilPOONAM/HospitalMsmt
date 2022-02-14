@@ -1,0 +1,349 @@
+﻿@model Hospital.Models.SubAdmin.Schedule
+
+@{
+    ViewData["Title"] = "AddSchedule";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+@section scripts{
+    <script src="~/admin/js/pages/HospitalAdmin/AddPatients.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+}
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link rel="stylesheet" href="~/assets/css/form_wizard_css.css" />
+
+<style>
+    .moving-tab {
+        width: 35% !important;
+        position: absolute !important;
+        left: 350px !important;
+    }
+    .time {
+        width: 150px;
+        height: 60px;
+        color: white;
+        background-color: black;
+        padding: 5px;
+        border: 5px solid;
+        float: left;
+    }
+
+    .modal {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50px,-50px) !important;
+    }
+
+    #timeSlot {
+        width: 800px;
+        margin: 0 auto;
+    }
+    /* The Modal (background) */
+    /*.modal {
+        display: none;*/ /* Hidden by default */
+    /*position: fixed;*/ /* Stay in place */
+    /*z-index: 1;*/ /* Sit on top */
+    /*left: 0;
+        top: 0;
+        width: 100%;*/ /* Full width */
+    /*height: 100%;*/ /* Full height */
+    /*overflow: auto;*/ /* Enable scroll if needed */
+    /*background-color: rgb(0,0,0);*/ /* Fallback color */
+    /*background-color: rgba(0,0,0,0.4);*/ /* Black w/ opacity */
+    /*padding-top: 60px;
+    }*/
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $('.selecttwo').select2();
+    });
+</script>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Schedule</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h4 class="page-title page-title_main">Add Doctor Schedule</h4>
+            </div>
+        </div>
+
+    <div class="image-container set-full-height">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 wizard_box">
+                    <!-- Wizard container -->
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="red" id="wizard">
+                            <form asp-action="AddSchedule">
+                                <input type="hidden" asp-for="HospitalID" value="@ViewBag.UserLoginID" />
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+                                <div class="wizard-navigation">
+                                    <ul>
+                                        <li><a href="#details" data-toggle="tab">Doctor Schedule</a></li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="tab-content">
+
+                                    <div class="tab-pane" id="details">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text">Please fill Doctor Schedule</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Patient</label>
+                                                    <select asp-for="PatientId" class="form-control selecttwo">
+                                                        @foreach (var item in ViewBag.Patient)
+                                                        {
+                                                            <option value="@item.PatientID" selected="selected">@item.PatientName</option>
+                                                        }
+                                                    </select>
+                                                    <span asp-validation-for="PatientId" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Doctor" class="control-label"></label>
+                                                    <select asp-for="DoctorId" class="form-control selecttwo" required>
+                                                        @foreach (var item in ViewBag.Doctor)
+                                                        {
+                                                            <option  selected="selected">@item.FirstName</option>
+                                                        }
+                                                    </select>
+                                                    <span asp-validation-for="DoctorId" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Disease" class="control-label"></label>
+                                                    <input type="text" disabled asp-for="Disease" class="form-control" />
+                                                    <span asp-validation-for="Disease" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="ScheduleTime" class="control-label"></label>
+                                                    <input type="number" asp-for="ScheduleTime" class="form-control" required />
+                                                    <span asp-validation-for="ScheduleTime" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+
+                                                <div class="form-group">
+                                                    <div class="form-group label-floating">
+                                                        <label class="display-inline">Status</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input asp-for="Status" class="form-check-input" type="radio" id="Schedule_Active" value="Active" checked>
+                                                        <label class="form-check-label" for="Schedule_Active">
+                                                            Active
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input asp-for="Status" class="form-check-input" type="radio" id="Schedule_InActive" value="IsActive">
+                                                        <label class="form-check-label" for="Schedule_IsActive">
+                                                            IsActive
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            @*<div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <i class="fa fa-clock-o" aria-hidden="true"></i> <label asp-for="ScheduleTime" class="control-label"></label>
+                                                    <input type="number" asp-for="ScheduleTime" class="form-control" required />
+                                                    <span asp-validation-for="ScheduleTime" class="text-danger"></span>
+                                                </div>
+                                                <input type="button" value="GetTime" class="btn btn-primary" id="GetTime" />
+                                            </div>*@
+
+                                        </div>
+
+                                            </div>
+
+
+                                        </div>
+                                <div class="wizard-footer">
+                                    <div class="pull-right">
+
+                                        <input type='button' class='btn btn-next btn-fill btn-wd' name='next' value='Next' />
+                                        @*<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />*@
+                                        <button class="btn btn-finish btn-fill btn-wd btn btn-success submit-btn">Add Schedule</button>
+                                    </div>
+                                    <div class="pull-left">
+                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> <!-- wizard container -->
+                </div>
+            </div> <!-- row -->
+        </div> <!--  big container -->
+
+    </div>
+
+
+
+
+
+
+
+    @*<div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <form asp-action="AddSchedule">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-user-md"></i>
+                            <label class="control-label">Patient</label>
+                            <select asp-for="PatientId" class="form-control selecttwo" required>
+                                @foreach (var item in ViewBag.Patient)
+                                {
+                                    <option value="@item.PatientID" selected="selected">@item.PatientName</option>
+                                }
+                            </select>
+                            <span asp-validation-for="PatientId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>   <label asp-for="Disease" class="control-label"></label>
+                            <input type="text" disabled asp-for="Disease" class="form-control" required />
+                            <span asp-validation-for="Disease" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-user-md"></i>
+                            <label asp-for="Doctor" class="control-label"></label>
+                            <select asp-for="DoctorId" class="form-control selecttwo" required>
+                            </select>
+                            <span asp-validation-for="DoctorId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i> <label asp-for="ScheduleTime" class="control-label"></label>
+                            <input type="number" asp-for="ScheduleTime" class="form-control" required />
+                            <span asp-validation-for="ScheduleTime" class="text-danger"></span>
+                        </div>
+                        <input type="button" value="GetTime" class="btn btn-primary" id="GetTime" />
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-toggle-on" aria-hidden="true"></i>   <label class="display-inline">Status</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input asp-for="Status" class="form-check-input" type="radio" id="Schedule_Active" value="Active" checked>
+                                <label class="form-check-label" for="Schedule_Active">
+                                    Active
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="Status" class="form-check-input" type="radio" id="Schedule_InActive" value="IsActive">
+                                <label class="form-check-label" for="Schedule_IsActive">
+                                    IsActive
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="m-t-20 text-center">
+                    <button class="btn btn-success submit-btn">Create Doctor Schedule</button>
+                </div>
+            </form>
+        </div>
+    </div>*@
+</div>
+
+<center>
+    <div id="timeSlot" class="modal fade" style="overflow: hidden;">
+        <div class="modal-dialog" style="width: 50%;">
+            <div class="modal-content">
+                <div id="timeSlot"></div>
+            </div>
+        </div>
+    </div>
+
+</center>
+@*@section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#PatientId").on("change", function () {
+            var id = $(this).val();
+            $.ajax({
+                type: "POST",
+                url: "/HospitalAdmin/getDiseaseDoctor",
+                data: { PatientId: id },
+                success: function (result) {
+                    $("#Disease").val(result.disease);
+                    for (var i = 0; i < result.doctorList.length; i++) {
+                        $('<option/>').val(result.doctorList[i].id).html(result.doctorList[i].firstName).appendTo('#DoctorId');
+                    }
+                },
+                error: function (req, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+        $('#GetTime').on('click', function () {
+            var doctorId = $("#DoctorId").val();
+            var html = "";
+            $.ajax({
+                type: "POST",
+                url: "/HospitalAdmin/getDoctorTime",
+                data: { DoctorId: doctorId },
+                success: function (result) {
+                    $.each(result, function (index, value) {
+                        html += "<div class='time'>" + value + "</div>"
+                    });
+                    $("#timeSlot").html(html);
+                    console.log(result);
+                },
+                error: function (req, status, error) {
+                    console.log(error);
+                }
+            });
+            $('#timeSlot').modal('show');
+        })
+
+    });
+
+</script>
+

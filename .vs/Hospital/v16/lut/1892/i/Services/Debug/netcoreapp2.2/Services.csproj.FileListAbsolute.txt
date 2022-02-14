@@ -1,0 +1,7 @@
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\b\Services\Debug\netcoreapp2.2\Services.deps.json
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\b\Services\Debug\netcoreapp2.2\Services.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Services\Debug\netcoreapp2.2\Services.csprojAssemblyReference.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Services\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Services\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Services\Debug\netcoreapp2.2\Services.csproj.CopyComplete
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Services\Debug\netcoreapp2.2\Services.dll

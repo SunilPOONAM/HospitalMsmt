@@ -1,0 +1,225 @@
+﻿@model Hospital.Models.Payment
+
+@{
+    ViewData["Title"] = "AddAmount";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+<style>
+    .EditAmoutnDetail {
+        background: #f6f6f6;
+        display:none;
+        border: 1px solid darkgrey;
+    }
+
+    .ok_btn {
+        color: limegreen;
+        font-size: large;
+        cursor: pointer;
+        display: none;
+    }
+
+    .cancel_btn {
+         color: red;
+        font-size: large;
+        cursor: pointer;
+        display: none;
+    }
+
+    .horzontel_line {
+        display:none;
+    }
+
+</style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Amount</li>
+
+    </ol>
+</nav>
+    <div class="content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h2 class="page-title page-title_main">Add Amount</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <form asp-action="AddAmount">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <i class="fa fa-id-badge" aria-hidden="true"></i>  <label asp-for="Patient_ID" class="control-label"></label>
+                                @if (ViewBag.PatienForAmount != null)
+                                {
+                                    <input asp-for="Patient_ID" value="@ViewBag.PatienForAmount.PatientID" class="form-control" readonly />
+                                }
+                                else
+                                @if (ViewBag.PatienForAmountDeplicate != null)
+                                {
+                                    <input asp-for="Patient_ID" value="@ViewBag.PatienForAmountDeplicate.Patient_ID" class="form-control" readonly />
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>  <label asp-for="Patient_Name" class="control-label"></label>
+                                @if (ViewBag.PatienForAmount != null)
+                                {
+                                    <input asp-for="Patient_Name" value="@ViewBag.PatienForAmount.PatientName" class="form-control" readonly />
+                                }
+                                else
+                                @if (ViewBag.PatienForAmountDeplicate != null)
+                                {
+                                    <input asp-for="Patient_Name" value="@ViewBag.PatienForAmountDeplicate.Patient_Name" class="form-control" readonly />
+                                }
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>  <label asp-for="PaymentDetail" class="control-label"></label>
+                                <input asp-for="PaymentDetail" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <i class="fa fa-money" aria-hidden="true"></i>  <label asp-for="Amount" class="control-label"></label>
+                               
+                                    <input asp-for="Amount" class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+                               
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="div_block">
+                                <button class="btn btn-success submit-btn">Save</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                <table class="table table-border table-striped custom-table datatable mb-0" id="myTable" style=" margin-top: 10px;">
+                    <thead>
+                        <tr>
+                           
+                            <th>
+                                @Html.DisplayNameFor(model => model.PaymentDetail)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Amount)
+                            </th>
+                            <th class="text-center">
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        @foreach (var item in ViewBag.patientAmount)
+                        {
+                        <form asp-action="EditAddAmount">
+                            <input type="hidden" asp-for="id" value="@item.id" />
+                            <tr class="EditRowDetails">
+                                <td class="@item.id">
+                                    <span>
+                                        @item.PaymentDetail
+                                    </span>
+                                    <input type="text" asp-for="PaymentDetail" value="@item.PaymentDetail" class="EditAmoutnDetail @item.id" />
+                                </td>
+                                <td class="@item.id">
+                                   $ <span>
+                                         @item.Amount
+                                    </span>
+                                    <input type="text" asp-for="Amount" value="@item.Amount" class="EditAmoutnDetail @item.id" />
+                                </td>
+                                <td class="@item.id">
+                                    
+                                    <button style="border: none; background: transparent;" class="ok_btn">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                    </button><span class="horzontel_line">|</span>
+                                    <button type="reset" style="border: none; background: transparent;" class="cancel_btn">
+                                        <i class="fa fa-ban cancelIcon" aria-hidden="true"></i>
+                                    </button>
+                                    <span class="edit_Del_section">
+                                        <i class="fa fa-pencil-square-o editIcon" onclick="Editfld(@item.id)" style="font-size: 19px; color: dodgerblue; cursor:pointer;"></i> |
+                                        <a id="del_icon" onclick="deleteRecord(@item.id, @item.Patient_ID)"><i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red; cursor:pointer;"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </form>
+                                }
+                            
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            function Editfld(data) {
+                $(".EditRowDetails").find("input").hide();
+                $(".EditRowDetails").find("span").show();
+                $(".EditRowDetails").find(".ok_btn").hide();
+                $(".EditRowDetails").find(".cancel_btn").hide();
+                $(".EditRowDetails").find(".horzontel_line").hide();
+                $("." + data).show();
+                $("." + data).find("span").hide();
+                $("." + data).find(".ok_btn").show();
+                $("." + data).find(".cancel_btn").show();
+                $("." + data).find(".edit_Del_section").hide();
+                $("." + data).find(".horzontel_line").show();
+                }
+            $(document).ready(function () {
+                $(".cancel_btn").click(function () {
+                    $(".EditRowDetails").find(".ok_btn").hide();
+                    $(".EditRowDetails").find(".cancel_btn").hide();
+                    $(".EditRowDetails").find("span").show();
+                    $(".EditRowDetails").find("input").hide();
+                    $(".EditRowDetails").find(".horzontel_line").hide();
+                });
+
+            });
+
+            function deleteRecord(data, PatientID) {
+                
+                 return $.ajax({
+        url: '/HospitalAdmin/DeletePatientAmountDetail',
+        data: { "id": data, "PatientID": PatientID},
+        type: "POST",
+        dataType: "json",
+        async: true,
+                     success: function (data) {
+                         
+                            var jsonData = JSON.parse(data);
+                         if (jsonData.Status === "1") {
+                            
+                                 tblTag.ajax.reload();
+                                swal("Deleted!", "Your record has been deleted.", "success");
+                            } 
+                            else {
+                                    swal("Cancelled", jsonData.Message, "error");
+                            }
+                        },
+                        error: function (data) {
+                            swal("Cancelled", "Your record is safe :)", "error");
+                        }
+    });
+            }
+
+        </script>

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Hospital.Models.SubAdmin.Department>
+
+@{
+    ViewData["Title"] = "DepartmentList";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Department List</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="page-title page-title_main">Department</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <a asp-action="AddDepartment" class="btn btn-success btn-rounded float-right add_appointment"><i class="fa fa-plus"></i> Add New Department  </a>
+            <div class="table-responsive">
+                <table class="table table-border table-striped custom-table datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="fa fa-building" aria-hidden="true"></i>    @Html.DisplayNameFor(model => model.DepartmentName)
+                            </th>
+                            <th>
+                                <i class="fa fa-file-text-o" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.Description)
+                            </th>
+                            <th>
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i>    @Html.DisplayNameFor(model => model.DepartmentStatus)
+                            </th>
+                            <th class="text-center">
+                                <i class="fa fa-gavel"></i>    Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DepartmentName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @if (item.DepartmentStatus == "Active")
+                                    {
+                                        <span class="custom-badge status-green">
+                                            @Html.DisplayFor(modelItem => item.DepartmentStatus)
+                                        </span>
+                                    }
+                                    else if (item.DepartmentStatus == "IsActive")
+                                    {
+                                        <span class="custom-badge status-red">
+                                            @Html.DisplayFor(modelItem => item.DepartmentStatus)
+                                        </span>
+                                    }
+                                    else
+                                    {
+
+                                    }
+                                </td>
+                                <td class="text-center">
+                                    <a asp-action="EditDepartment" asp-route-id="@item.DepartmentID"><i class="fa fa-pencil-square-o" style="font-size: 19px"></i></a> |
+                                    <a asp-action="DepartmentDetails" asp-route-id="@item.DepartmentID"><i class="fa fa-info-circle m-r-5" style="font-size: 19px; color: lightblue"></i></a> |
+                                    <a asp-controller="HospitalAdmin" asp-action="DepartmentDelete" asp-route-id="@item.DepartmentID" onclick="return confirm('Are you sure want to delete this Department?')"><i class="fa fa-trash-o m-r-5" style="font-size: 19px; color:  #086972"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

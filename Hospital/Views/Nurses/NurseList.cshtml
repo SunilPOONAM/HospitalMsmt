@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Hospital.Models.SubAdmin.Nurse>
+
+@{
+    ViewData["Title"] = "NurseList";
+    Layout = "~/Views/Shared/_NursesLayout.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Nurses </h4>
+        </div>
+        @*<div class="col-sm-8 col-9 text-right m-b-20">
+            <a asp-action="AddNurse" class="btn btn-success btn-rounded float-right"><i class="fa fa-plus"></i> Add Nurse </a>
+        </div>*@
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-border table-striped custom-table datatable mb-0">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                <i class="fa fa-user-plus"></i>  @Html.DisplayNameFor(model => model.FullName)
+                            </th>
+                            <th>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.EmailAddress)
+                            </th>
+
+                            <th>
+                                <i class="fa fa-phone" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.MobileNo)
+                            </th>
+
+                            <th>
+                                <i class="fa fa-tint" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.BloodGroup)
+                            </th>
+                            <th>
+                                <i class="fa fa-birthday-cake"></i> @Html.DisplayNameFor(model => model.DateOfBirth)
+                            </th>
+                            <th>
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.Status)
+                            </th>
+                            <th class="text-center">
+                                <i class="fa fa-gavel"></i> Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.ListOfNurses)
+                        {
+                            <tr>
+
+                                <td>
+                                    @@item.FullName
+                                </td>
+                                <td>
+                                    @item.Email
+                                </td>
+                                <td>
+                                    @item.PhoneNumber
+                                </td>
+                                <td>
+                                    @item.BloodGroup
+                                </td>
+                                <td>
+                                    @item.DOB
+                                </td>
+                                <td>
+                                    @if (@item.Availiablity == "Available")
+                                    {
+                                    <span class="custom-badge status-green">
+                                        @item.Availiablity
+                                    </span>
+                                    }
+                                    else if (@item.Availiablity == "Not Available")
+                                    {
+                                        <span class="custom-badge status-red">
+                                            @item.Availiablity
+                                        </span>
+                                    }
+                                    else if (@item.Availiablity == "On Leave")
+                                    {
+                                        <span class="custom-badge status-blue">
+                                            @item.Availiablity
+                                        </span>
+                                    }
+                                    else
+                                    {
+
+                                    }
+
+                                </td>
+                                <td class="text-center">
+                                    @*<a asp-action="EditNurse" asp-route-id="@item.Id"><i class="fa fa-pencil-square-o" style="font-size: 19px"></i></a> |*@
+                                    <a asp-action="NurseDetails" asp-route-id="@item.Id"><i class="fa fa-info-circle m-r-5" style="font-size: 19px; color: lightblue"></i></a> |
+                                    <a asp-controller="Nurses" asp-action="NurseDelete" asp-route-id="@item.Id" onclick="return confirm('Are you sure want to delete this nurse ?')"><i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red"></i></a>
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿@model Hospital.Models.CommonModels.ChatViewModel
+<div class="col-md-12">
+
+    <div class="dash-widget1">
+        @if (Model.ReciverMessages != null)
+        {
+            foreach (var item in Model.ReciverMessages)
+            {
+                <div class="receiver-block">
+                    <span class="dash-widget-bg1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <div class="dash-widget-info reciv_box">
+                        <h3>@item.FirstName</h3>
+                        <p>@item.Message</p>
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+        @if (Model.SenderMessages != null)
+        {
+            foreach (var item in Model.SenderMessages)
+            {
+                <div class="sender-block">
+                    <span class="dash-widget-bg1 receiv_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <div class="dash-widget-info">
+                        <h3>@item.FirstName</h3>
+                        <p>@item.Message</p>
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+    </div>
+
+</div>
+<div class="chat_btn_section">
+    <input type="hidden" class="SelectedId" value="@ViewBag.SelectedId" />
+    <div class="chat_btn_box">
+        <div class="row">
+            <div class="col-md-9">
+                <input type="text" id="txtMessage" placeholder="Type message...." class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <input type="button" id="btnSendMessge" class="btn btn-success send_btn" value="send" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#btnSendMessge").click(function () {
+        var id = $(".SelectedId").val();
+        var message = $("#txtMessage").val();
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("SendMessage")",
+            data: { Id: id,Message:message},
+            dataType: "text",
+            success: function (result) {
+                $('#txtMessage').val("");
+            },
+            error: function (req, status, error) {
+                $('#txtMessage').val("");
+                $.ajax({
+            type: "POST",
+            url: "@Url.Action("ChatPartial")",
+            data: { Id:id },
+            dataType: "html",
+            success: function (result) {
+                $('#dvUserChat').html(result);
+            },
+            error: function (req, status, error) {
+                console.log(error);
+            }
+        });
+            }
+        });
+    });
+</script>

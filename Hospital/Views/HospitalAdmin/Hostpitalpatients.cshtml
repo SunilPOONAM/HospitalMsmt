@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Hospital.Models.SubAdmin.Patients>
+@{
+    ViewData["Title"] = "Hostpital patients";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+<style>
+    td {
+        width: 60px!important;
+    }
+</style>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Patients</h4>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="table-responsive">
+                <table class="display table table-border" id="tblPatient">
+                    <thead>
+                        <tr>
+                            <th><i class="fa fa-id-card" aria-hidden="true"></i> S.No</th>
+                            <th>
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.PatientName)
+                            </th>
+                            <th>
+                                <i class="fa fa-line-chart" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.Age)
+                            </th>
+                            <th>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th>
+                                <i class="fa fa-phone" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.Phone)
+                            </th>
+                            <th>
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.IsActive)
+                            </th>
+                            <th><i class="fa fa-info-circle" aria-hidden="true"></i>    Details</th>
+                            <th> <i class="fa fa-gavel"></i> Action</th>
+                        </tr>
+                    </thead>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts { 
+    <script src="~/admin/js/pages/HospitalAdmin/HospitalPatients.js"></script>
+}

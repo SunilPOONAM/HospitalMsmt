@@ -1,0 +1,166 @@
+﻿@model Hospital.Models.Payment
+@*@model IEnumerable<Hospital.Models.Payment>*@
+@{
+    ViewData["Title"] = "Payment";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+<style>
+    .editicon {
+        color: dodgerblue;
+        cursor: pointer;
+    }
+
+    .inputCss {
+        background: #f6f6f6;
+        display:none;
+        border: 1px solid darkgrey;
+    }
+
+    .okIcon {
+        color: limegreen;
+        font-size: large;
+        cursor: pointer;
+        display: none;
+    }
+
+    .cancelIcon {
+        color: red;
+        font-size: large;
+        cursor: pointer;
+        display: none;
+    }
+
+    .PaymentComplete {
+        color: limegreen;
+    font-size: x-large;
+    }
+</style>
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h4 class="page-title page-title_main">Payment</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 col-xl-12 table-responsive">
+                <table class="table table-border table-striped custom-table datatable mb-0" id="myTable" style=" margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="fa fa-id-card-o"></i>  @Html.DisplayNameFor(model => model.Patient_ID)
+                            </th>
+                            <th>
+                                <i class="fa fa-wheelchair"></i> @Html.DisplayNameFor(model => model.Patient_Name)
+                            </th>
+
+                            <th>
+                                <i class="fa fa-wheelchair"></i>  @Html.DisplayNameFor(model => model.Status)
+                            </th>
+                            <th>
+                                <i class="fa fa-money" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.Amount)
+                            </th>
+
+                            <th>
+                                <i class="fa fa-rupee"></i>  @Html.DisplayNameFor(model => model.Deposit_Amount)
+                            </th>
+                            <th>
+                                <i class="fa fa-rupee"></i>  @Html.DisplayNameFor(model => model.Pending_Amount)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (ViewBag.PatientsAmountList != null)
+                        {
+                            @foreach (var item in ViewBag.PatientsAmountList)
+                            {
+
+                                <tr>
+                                    <td>
+                                        @if (@item.Payment_Complete == "1")
+                                        {
+                                            <i class="fa fa-check-square-o PaymentComplete" aria-hidden="true"></i>
+                                        }
+                                    </td>
+                                    <td>
+                                        @item.Patient_ID
+                                    </td>
+                                    <td>
+                                        @item.Patient_Name
+                                    </td>
+
+                                    @*<td>
+                                        @item.Status
+                                    </td>*@
+                                    <td>
+                                        @if (item.Status == "Pending")
+                                        {
+                                            <span class="custom-badge status-red">
+                                                @item.Status
+                                            </span>
+                                        }
+                                        else if (item.Status == "Some Amount Pending")
+                                        {
+                                            <span class="custom-badge status-blue">
+                                                @item.Status
+                                            </span>
+                                        }
+                                        else
+                                    if (item.Status == "Amount Deposit")
+                                        {
+                                            <span class="custom-badge status-green">
+                                                @item.Status
+                                            </span>
+                                        }
+                                    </td>
+
+                                    <td>
+                                        $ @item.Amount
+                                    </td>
+
+                                    <td>
+                                        $ @item.Deposit_Amount
+                                        <form asp-action="AddDepositAmount">
+                                            <span class="aadAmountField">
+                                                <input type="hidden" asp-for="Patient_ID" value="@item.Patient_ID" />
+                                                <input type="text" asp-for="Deposit_Amount" class="inputCss" onkeyup="this.value=this.value.replace(/[^\d]/,'')">&nbsp;
+                                                <button style="border: none; background: transparent;">
+                                                    <i class="fa fa-check-square-o okIcon amoutInputOk" aria-hidden="true"></i>
+                                                </button>&nbsp;&nbsp;
+                                                <i class="fa fa-ban cancelIcon amountInputCancel" aria-hidden="true"></i>
+                                                <i class="fa fa-pencil-square-o editicon" aria-hidden="true"></i>
+                                            </span>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        $ @item.Pending_Amount
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".aadAmountField").click(function () {
+                $("input").hide();
+                $(".amoutInputOk").hide();
+                $(".amountInputCancel").hide();
+                $(".editicon").show();
+                $(this).find("i").hide();
+                $(this).find("input").show();
+                $(this).find(".amoutInputOk").show();
+                $(this).find(".amountInputCancel").show();
+                $(this).addClass("cancelAmountField");
+                $(this).removeClass("aadAmountField");
+            });
+        });
+
+    </script>

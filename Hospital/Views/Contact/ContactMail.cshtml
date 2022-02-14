@@ -1,0 +1,195 @@
+﻿@model Contactus
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<style>
+    .servis {
+        width: 285px;
+        text-align: center;
+        box-shadow: 0px 0px 5px 5px;
+        background-color: aqua;
+        float: left;
+        margin: 20px;
+    }
+
+    .head {
+        height: 50px;
+        background-color: beige;
+        font-size: 35px;
+    }
+
+    .desc {
+        height: auto;
+        font-size: 20px;
+    }
+
+    .price {
+        background-color: azure;
+    }
+
+    /*plans tiles*/
+    .block.block-bordered {
+        border: 1px solid #e6ebf4;
+        box-shadow: none;
+    }
+
+    .block-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: .75rem 1.25rem;
+        transition: opacity .25s ease-out;
+    }
+
+    .bg-body-light {
+        background-color: #f9fafc !important;
+        padding-bottom: 20px;
+    }
+
+    .block-content {
+        transition: opacity .25s ease-out;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.25rem 1.25rem 1px;
+        overflow-x: visible;
+    }
+
+    .bg-body-light {
+        background-color: #f9fafc !important;
+        padding-bottom: 20px;
+    }
+
+    .btn-hero-secondary.disabled, .btn-hero-secondary:disabled {
+        color: #fff;
+        background-color: #111;
+    }
+
+    .btn.disabled, .btn:disabled {
+        opacity: .65;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+</style>
+
+<header id="Home">
+    <nav class="nav-menu">
+        <div class="row">
+            <img src="~/assets/img/logo.png" alt="HMS logo" class="logo">
+            @*<img src="~/Layout/resources/img/logo-1.png" alt="HMS logo" class="logo" />*@
+            <img src="~/assets/img/logo.png" alt="HMS logo" class="logo-black">
+            <ul class="main-nav js-main-nav">
+                <li><a href="~/Home/">Home</a></li>
+                @*<li><a href="#plan">Plan & subscription</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="~/contact/ContactMail">Contact</a></li>*@
+
+                @*<li><a href="@Url.Action("Register", "Account")">Register</a></li>*@
+                @*@if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="@Url.Action("Index", "Admin")">Admin</a></li>
+                    }*@
+                @*<li><a href="@Url.Action("Login", "Account")">Sign In</a></li>*@
+                @*<li><a href="#Signin">Sign In</a></li>*@
+            </ul>
+            <a class="mobile-nav-icon js-mobile-nav-icon"><i class="ion-ios-menu"></i></a>
+        </div>
+    </nav>
+    <div class="hero-text-box">
+        <h1>Hospital Management<br> System.</h1>
+        <br>
+        <a class="btn btn-ghost js-scroll-to-start" href="#">Show me more</a>
+    </div>
+</header>
+<h3>@ViewBag.Message</h3>
+<section class="section-testimonials">
+    <div class="row">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <form method="post">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label asp-for="@Model.Email" class="control-label" style=" font-weight: inherit;"></label>
+                            <input asp-for="@Model.Email" class="form-control" />
+                            <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label asp-for="@Model.Name" class="control-label" style=" font-weight: inherit;"></label>
+                            <input asp-for="@Model.Name" class="form-control" />
+                            <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label asp-for="@Model.Subject" class="control-label" style=" font-weight: inherit;"></label>
+                            <input asp-for="@Model.Subject" class="form-control" />
+                            <span asp-validation-for="@Model.Subject" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label asp-for="@Model.Message" class="control-label" style=" font-weight: inherit;"></label>
+                            <textarea asp-for="@Model.Message" class="form-control"></textarea>
+                            <span asp-validation-for="@Model.Message" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label asp-for="@Model.Phone" class="control-label" style=" font-weight: inherit;"></label>
+                            <input asp-for="@Model.Phone" class="form-control" />
+                            <span asp-validation-for="@Model.Phone" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <button style="text-align:center" type="submit" class="btn btn-primary">Send Mail</button>
+            </form>
+        </div>
+    </div>
+</section>
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">IOS App</a></li>
+                    <li><a href="#">Andriod App</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <p> Copyright &copy; @DateTime.Now.Year by HMS.All rights reserved.</p>
+            </div>
+        </div>
+    </footer>

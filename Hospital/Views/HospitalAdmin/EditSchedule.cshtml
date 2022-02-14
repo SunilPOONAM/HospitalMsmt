@@ -1,0 +1,110 @@
+﻿@model Hospital.Models.SubAdmin.Schedule
+
+@{
+    ViewData["Title"] = "EditSchedule";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Schedule</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Edit Schedule</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-b-20">
+            <form asp-action="EditSchedule">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="CreatedDate" class="form-control" />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label asp-for="Doctor" class="control-label float-left"></label>
+                            <input asp-for="Doctor" class="form-control" required />
+                            <span asp-validation-for="Doctor" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label asp-for="AvailableStartDay" class="control-label float-left"></label>
+                            <select asp-for="AvailableStartDay" class="form-control" required>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+                            </select>
+                            <span asp-validation-for="AvailableStartDay" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label asp-for="AvailableEndDay" class="control-label float-left"></label>
+                            <select asp-for="AvailableEndDay" class="form-control" required>
+
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+                            </select>
+                            <span asp-validation-for="AvailableEndDay" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label asp-for="AvailableStartTime" class="control-label float-left"></label>
+                            <input asp-for="AvailableStartTime" class="form-control" required />
+                            <span asp-validation-for="AvailableStartTime" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label asp-for="AvailableEndTime" class="control-label float-left"></label>
+                            <input asp-for="AvailableEndTime" class="form-control" required />
+                            <span asp-validation-for="AvailableEndTime" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label asp-for="TimePerPatient" class="control-label float-left"></label>
+                            <input type="number" asp-for="TimePerPatient" class="form-control" required />
+                            <span asp-validation-for="TimePerPatient" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="display-inline float-left">Status</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input asp-for="Status" class="form-check-input" type="radio" id="Schedule_Active" value="Active" checked>
+                                <label class="form-check-label" for="Schedule_Active">
+                                    Active
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="Status" class="form-check-input" type="radio" id="Schedule_IsActive" value="IsActive">
+                                <label class="form-check-label" for="Schedule_IsActive">
+                                    IsActive
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-t-20 text-center">
+                    <button class="btn btn-success submit-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

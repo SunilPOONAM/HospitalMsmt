@@ -1,0 +1,92 @@
+﻿@model Hospital.Models.SubAdmin.Appointments
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Appointment Details</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h4 class="page-title page-title_main">Appointment Details</h4>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Widget Item -->
+            <div class="col-md-12">
+                <div class="widget-area-2 proclinic-box-shadow">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                                <tr>
+                                    <td><h4>@Html.DisplayNameFor(model => model.PatientId)</h4></td>
+                                    <td> @Html.DisplayFor(model => model.PatientId)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>  @Html.DisplayNameFor(model => model.DoctorName)</h4></td>
+                                    <td> @Html.DisplayFor(model => model.DoctorName)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4> @Html.DisplayNameFor(model => model.Department)</h4></td>
+                                    <td> @Html.DisplayFor(model => model.Department)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4> @Html.DisplayNameFor(model => model.TokenNumber)</h4></td>
+                                    <td> @Html.DisplayFor(model => model.TokenNumber)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4> @Html.DisplayNameFor(model => model.Problem)</h4></td>
+                                    <td>  @Html.DisplayFor(model => model.Problem)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4> @Html.DisplayNameFor(model => model.AppointmentDate)</h4></td>
+                                    <td> @Html.DisplayFor(model => model.AppointmentDate)</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>    @Html.DisplayNameFor(model => model.TimeSlot)</h4>
+                                    </td>
+                                    <td> @Html.DisplayFor(model => model.TimeSlot)</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>@Html.DisplayNameFor(model => model.AppointmentStatus)</h4></td>
+                                    <td> @Html.DisplayFor(model => model.AppointmentStatus)</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination export-pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><span class="fa fa-download "></span> csv</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><span class="fa fa-printer"></span> print</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><span class="fa fa-file "></span> PDF</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><span class="fa fa-align-justify "></span> Excel</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div>
+                            <a asp-action="EditAppointment" asp-route-id="@Model.AppointmentId" class="btn btn-success mb-3"><i class="fa fa-pencil m-r-5"></i>Edit Appointment</a>
+
+                            <a class="btn btn-danger mb-3" asp-controller="HospitalAdmin" asp-action="AppointmentDelete" asp-route-id="@Model.AppointmentId" onclick="return confirm('Are you sure want to delete this Appointment ?')"><i class="fa fa-trash-o m-r-5"></i> Delete Appointment</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

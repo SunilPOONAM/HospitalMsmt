@@ -1,0 +1,148 @@
+﻿@*@model IEnumerable<Hospital.Models.SubAdmin.Doctor>*@
+@model IEnumerable<Hospital.Models.ApplicationUser>
+
+@{
+    ViewData["Title"] = "DoctorList";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+<style>
+    tbody tr:hover {
+        background: lavender !important;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@Html.Raw(TempData["msg"])
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Doctor List</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="page-title page-title_main">Doctors</h2>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                <a asp-action="AddDoctor" class="btn_doctor btn btn-success btn-rounded float-right"><i class="fa fa-plus"></i> Add Doctor</a>
+                <br />
+                <table class="table table-border table-striped custom-table datatable mb-0" id="myTable" style=" margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="fa fa-user-md"></i>  Doctor Name
+                            </th>
+                            <th>
+                                <i class="fa fa-trophy" aria-hidden="true"></i>  Specialization
+                            </th>
+                            <th>
+                                <i class="fa fa-history" aria-hidden="true"></i>   Experience
+                            </th>
+                            <th>
+                                <i class="fa fa-phone" aria-hidden="true"></i>    PhoneNumber
+                            </th>
+                            <th>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>  Email
+                            </th>
+                            <th>
+                                <i class="fa fa-medkit" aria-hidden="true"></i>    Availiablity
+                            </th>
+                            <th class="text-center">
+                                <i class="fa fa-gavel"></i> Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FirstName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Specialization)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Experience)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @if (item.Availiablity == "Available")
+                                    {
+                                        <span class="custom-badge status-green">
+                                            @Html.DisplayFor(modelItem => item.Availiablity)
+                                        </span>
+                                    }
+                                    else if (item.Availiablity == "Not Available")
+                                    {
+                                        <span class="custom-badge status-red">
+                                            @Html.DisplayFor(modelItem => item.Availiablity)
+                                        </span>
+                                    }
+                                    else if (item.Availiablity == "On Leave")
+                                    {
+                                        <span class="custom-badge status-blue">
+                                            @Html.DisplayFor(modelItem => item.Availiablity)
+                                        </span>
+                                    }
+                                    else
+                                    {
+
+                                    }
+
+                                </td>
+                                <td class="text-center">
+                                    <a asp-action="EditDoctor" asp-route-id="@item.Id"><i class="fa fa-pencil-square-o" style="font-size: 19px"></i></a> |
+                                    <a asp-action="DoctorDetails" asp-route-id="@item.Id"><i class="fa fa-info-circle m-r-5" style="font-size: 19px; color: lightblue"></i></a> |
+                                    @*<a asp-controller="HospitalAdmin" asp-action="DoctorDelete" asp-route-id="@item.Id" onclick="return confirm('Are you sure want to delete this doctor ?')">
+                                        <i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red"></i></a>*@
+                                    <a onclick="DeleteDoctorAction('@item.Id')">
+                                        <i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red"></i>
+                                    </a>
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <script>
+                    function myFunction() {
+                        var input, filter, table, tr, td, i, txtValue;
+                        input = document.getElementById("myInput");
+                        filter = input.value.toUpperCase();
+                        table = document.getElementById("myTable");
+                        tr = table.getElementsByTagName("tr");
+                        for (i = 0; i < tr.length; i++) {
+                            td = tr[i].getElementsByTagName("td")[0];
+                            if (td) {
+                                txtValue = td.textContent || td.innerText;
+                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                    tr[i].style.display = "";
+                                } else {
+                                    tr[i].style.display = "none";
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/admin/js/pages/DeleteSweetAlert/All.js"></script>

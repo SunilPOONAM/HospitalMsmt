@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Hospital.Models.SubAdmin.Allotment>
+
+@{
+    ViewData["Title"] = "AllotmentList";
+    Layout = "~/Views/Shared/_NursesLayout.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="page-title page-title_main">Allotments Lists</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <a asp-action="AddAllotment" class="btn btn-success btn-rounded float-right room_allot_btn"><i class="fa fa-plus"></i> Room Allotments  </a>
+            <div class="table-responsive">
+                <table class="table table-border table-striped custom-table datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="fa fa-bed" aria-hidden="true"></i>     @Html.DisplayNameFor(model => model.Room)
+                            </th>
+                            <th>
+                                <i class="fa fa-medium" aria-hidden="true"></i>     @Html.DisplayNameFor(model => model.RoomType)
+                            </th>
+                            <th>
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>    @Html.DisplayNameFor(model => model.PatientName)
+                            </th>
+                            <th>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.AllotmentDate)
+                            </th>
+                            <th>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.DischargeDate)
+                            </th>
+                            <th>
+                                <i class="fa fa-user-md"></i>  @Html.DisplayNameFor(model => model.DoctorName)
+                            </th>
+                            <th>
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.Status)
+                            </th>
+                            <th class="text-center">
+                                <i class="fa fa-gavel"></i>  Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Room)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RoomType)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PatientName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AllotmentDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DischargeDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DoctorName)
+                                </td>
+                                <td>
+                                    @if (item.Status == "Available")
+                                    {
+                                        <span class="custom-badge status-green">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </span>
+                                    }
+                                    else if (item.Status == "Not Discharge")
+                                    {
+                                        <span class="custom-badge status-red">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </span>
+                                    }
+                                    else if (item.Status == "Not Alloted")
+                                    {
+                                        <span class="custom-badge status-blue">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </span>
+                                    }
+
+                                </td>
+
+                                <td class="text-center">
+                                    <a asp-action="EditAllotment" asp-route-id="@item.AllotmentId"><i class="fa fa-pencil-square-o" style="font-size: 19px"></i></a> |
+                                    <a asp-action="AllotmentDetails" asp-route-id="@item.AllotmentId"><i class="fa fa-info-circle m-r-5" style="font-size: 19px; color: lightblue"></i></a> |
+                                    <a asp-controller="Nurses" asp-action="AllotmentDelete" asp-route-id="@item.AllotmentId" onclick="return confirm('Are you sure want to delete this Room Allotment?')"><i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>
+</div>

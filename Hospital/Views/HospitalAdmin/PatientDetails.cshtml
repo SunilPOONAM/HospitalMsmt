@@ -1,0 +1,232 @@
+﻿@model Hospital.ViewModels.PatientViewModel
+
+@{
+    ViewData["Title"] = "PatientDetails";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+<style>
+    .generalmedHisty, .patneMedclRecod, .InCaseOfEmgncy, .InsurnceDetal {
+        color:#fff;
+        font-size:x-large; 
+        background:#086972;
+        padding: 5px 25px;
+    }
+
+    .export-pagination li a:hover {
+        background:#086972;
+        color:#fff;
+    }
+</style>
+<nav aria-label="breadcrumb">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Patient Details</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+<div class="content">
+    <div id="patient-details">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <p class="patneMedclRecod">Patient medical record</p>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4>@Html.DisplayNameFor(m => m.PatientID)</h4>
+                        @Html.DisplayFor(m => m.PatientID)
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4> @Html.DisplayNameFor(m => m.PatientName)</h4>
+                        @Html.DisplayFor(m => m.PatientName)
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4> @Html.DisplayNameFor(m => m.Age)</h4>
+                        @Html.DisplayFor(m => m.Age)
+                    </div>
+                
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4>@Html.DisplayNameFor(m => m.Email)</h4>
+                        @Html.DisplayFor(m => m.Email)
+
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4> @Html.DisplayNameFor(m => m.Gender)</h4>
+                        @Html.DisplayFor(m => m.Gender)
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4> @Html.DisplayNameFor(m => m.DOB)</h4>
+                        @Html.DisplayFor(m => m.DOB)
+
+                    </div>
+                </div>
+            </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              &nbsp;
+          </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4>@Html.DisplayNameFor(m => m.Phone)</h4>
+                        @Html.DisplayFor(m => m.Phone)
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4>@Html.DisplayNameFor(m => m.Address)</h4>
+                        @Html.DisplayFor(m => m.Address)
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4> @Html.DisplayNameFor(m => m.Street)</h4>
+                        @Html.DisplayFor(m => m.Street)
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4> @Html.DisplayNameFor(m => m.CountryName)</h4>
+                        @Html.DisplayFor(m => m.CountryName)
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4>@Html.DisplayNameFor(m => m.StateName)</h4>
+                        @Html.DisplayFor(m => m.StateName)
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4>@Html.DisplayNameFor(m => m.CityName)</h4>
+                        @Html.DisplayFor(m => m.CityName)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                        <h4>@Html.DisplayNameFor(m => m.ZipCode)</h4>
+                        @Html.DisplayFor(m => m.ZipCode)
+                    </div>
+
+                </div>
+                <br />
+
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <p class="InCaseOfEmgncy">In case of emergency</p>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+                <h4> @Html.DisplayNameFor(m => m.Emergency_Contact_Name)</h4>
+                @Html.DisplayFor(m => m.Emergency_Contact_Name)
+
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <h4> @Html.DisplayNameFor(m => m.Emergency_Contact_Number)</h4>
+                @Html.DisplayFor(m => m.Emergency_Contact_Number)
+            </div>
+
+            @*<div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <h4>@Html.DisplayNameFor(m => m.Address)</h4>
+                        @Html.DisplayFor(m => m.Address)
+                    </div>
+                </div>*@
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <p class="generalmedHisty">General medical history</p>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+            <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+            <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+            <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+            <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+            <a href="#">See more...</a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <p class="InsurnceDetal">Insurance details</p>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <h4> Insurance Company Name</h4>
+                    <p>XYZ</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <h4>Policy Number</h4>
+                    <p>3546345</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <h4>Expiry Date</h4>
+                    <h4>4/09/2022</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h4>Do you have medical Insurance?</h4>
+                    <h4>Yes</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h4>Medical Insurance Details</h4>
+                    <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+                    <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+                    <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+                    <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+                    <p>In an emergency, you might not be able to effectively communicate about your full medical history with the paramedics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <nav aria-label="Page navigation" style="padding-left: 39px; z-index: 2;">
+            <ul class="pagination export-pagination">
+                <li class="page-item">
+                    <a class="page-link go-back" href="#"><i class="fa fa-backward"></i> Back</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" onclick=""><i class="fa fa-printer"></i> Print</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#"><i class="fa fa-file"></i> PDF</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+@section scripts{ 
+    <script src="~/admin/js/pages/HospitalAdmin/PatientDetails.js"></script>
+}

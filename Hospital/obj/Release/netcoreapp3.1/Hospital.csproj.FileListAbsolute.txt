@@ -1,0 +1,760 @@
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\appsettings.Development.json
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\appsettings.json
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Properties\launchSettings.json
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.exe
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.deps.json
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.runtimeconfig.json
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.runtimeconfig.dev.json
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.pdb
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.Views.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.Views.pdb
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Data.Sqlite.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\NuGet.Frameworks.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.core.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Convention.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Hosting.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Runtime.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Runtime.Caching.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Text.Json.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\BitBucket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.csprojAssemblyReference.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.AssemblyInfoInputs.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.AssemblyInfo.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.csproj.CoreCompileInputs.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.MvcApplicationPartsAssemblyInfo.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorAssemblyInfo.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorAssemblyInfo.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.TagHelpers.input.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.TagHelpers.output.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorCoreGenerate.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ExternalLogin.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ForgotPasswordConfirmation.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Lockout.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\LoginWith2fa.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\LoginWithRecoveryCode.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ResetPasswordConfirmation.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\SignedOut.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\FAQList.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\FeaturesList.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\ManageFAQ.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Allotments\Create.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Allotments\Details.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Allotments\Edit.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Allotments\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Appointments\Create.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Appointments\Details.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Appointments\Edit.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Appointments\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Departments\Create.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Departments\Details.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Departments\Edit.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Departments\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctors\Create.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctors\Details.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctors\Edit.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctors\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\FAQ\AddFAQ.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\FAQ\EditFAQ.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Features\AddFeature.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Features\EditFeature.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Patients\Create.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Patients\Details.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Patients\Edit.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Patients\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Create.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Delete.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Details.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Edit.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Schedules\Create.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Schedules\Details.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Schedules\Edit.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Schedules\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\Admin_Layout.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\LoginPartial.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_SubAdminLayout.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ViewImports.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ViewStart.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\SubAdmin\Index.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorTargetAssemblyInfo.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorTargetAssemblyInfo.cs
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.Views.pdb
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.csproj.CopyComplete
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\staticwebassets\Hospital.StaticWebAssets.Manifest.cache
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\staticwebassets\Hospital.StaticWebAssets.xml
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.dll
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.pdb
+E:\BitBucket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.genruntimeconfig.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\appsettings.Development.json
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\appsettings.json
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Properties\launchSettings.json
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.exe
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.deps.json
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.runtimeconfig.json
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.runtimeconfig.dev.json
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.pdb
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.Views.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.Views.pdb
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\AutoMapper.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Data.Sqlite.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\NuGet.Frameworks.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\PayPal.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.core.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Convention.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Hosting.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Runtime.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Runtime.Caching.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Text.Json.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.csprojAssemblyReference.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\staticwebassets\Hospital.StaticWebAssets.Manifest.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\staticwebassets\Hospital.StaticWebAssets.xml
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.MvcApplicationPartsAssemblyInfo.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorAssemblyInfo.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorAssemblyInfo.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.AssemblyInfoInputs.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.AssemblyInfo.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.TagHelpers.input.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.TagHelpers.output.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorCoreGenerate.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ExternalLogin.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ForgotPasswordConfirmation.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Lockout.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\LoginWith2fa.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\LoginWithRecoveryCode.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ResetPasswordConfirmation.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\SignedOut.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\FAQList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\FeaturesList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\GetUsers.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\ManageFAQ.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\role.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\AddAppointment.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\AddSchedule.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\AppointmentDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\AppointmentList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\EditAppointment.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\EditSchedule.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\Index.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\PatientDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\PatientList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\ScheduleDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\ScheduleList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\FAQ\AddFAQ.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\FAQ\EditFAQ.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Features\AddFeature.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Features\EditFeature.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddAppointment.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddDepartment.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddDoctor.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddNurse.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddPatient.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddSchedule.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AllotmentDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AllotmentList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AppointmentDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AppointmentList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\DepartmentDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\DepartmentList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\DoctorDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\DoctorList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditAppointment.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditDepartment.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditDoctor.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditNurse.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditPatient.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditSchedule.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\Index.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\NurseDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\NurseList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\PatientDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\PatientList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\ScheduleDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\ScheduleList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\AddAllotment.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\AllotmentDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\AllotmentList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\DepartmentDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\DepartmentList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\EditAllotment.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\Index.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\NurseDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\NurseList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\PatientDetails.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\PatientList.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Create.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Delete.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Details.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Edit.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Index.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\Admin_Layout.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\LoginPartial.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_DoctorLayout.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_HospitalAdminLayout.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_NursesLayout.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ViewImports.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ViewStart.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorTargetAssemblyInfo.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorTargetAssemblyInfo.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.Views.pdb
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.csproj.CopyComplete
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.pdb
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\appsettings.Development.json
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\appsettings.json
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.exe
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.deps.json
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.runtimeconfig.json
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.runtimeconfig.dev.json
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.pdb
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.Views.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Hospital.Views.pdb
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\AutoMapper.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Data.Sqlite.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\NuGet.Frameworks.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\PayPal.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.core.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Convention.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Hosting.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.Runtime.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Runtime.Caching.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\System.Text.Json.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Bitbuket\hospitalmanagement\Hospital\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.csprojAssemblyReference.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.AssemblyInfoInputs.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.AssemblyInfo.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.csproj.CoreCompileInputs.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.MvcApplicationPartsAssemblyInfo.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorAssemblyInfo.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorAssemblyInfo.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\staticwebassets\Hospital.StaticWebAssets.Manifest.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\staticwebassets\Hospital.StaticWebAssets.xml
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\scopedcss\bundle\Hospital.styles.css
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.TagHelpers.input.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.TagHelpers.output.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorCoreGenerate.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ExternalLogin.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ForgotPasswordConfirmation.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Lockout.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\LoginWith2fa.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\LoginWithRecoveryCode.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\ResetPasswordConfirmation.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Account\SignedOut.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\FAQList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\FeaturesList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\GetUsers.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\ManageFAQ.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Admin\role.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\AddAppointment.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\AddSchedule.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\AppointmentDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\AppointmentList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\EditAppointment.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\EditSchedule.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\Index.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\PatientDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\PatientList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\ScheduleDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Doctor\ScheduleList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\FAQ\AddFAQ.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\FAQ\EditFAQ.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Features\AddFeature.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Features\EditFeature.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddAppointment.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddDepartment.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddDoctor.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddNurse.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddPatient.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AddSchedule.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AllotmentDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AllotmentList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AppointmentDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\AppointmentList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\DepartmentDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\DepartmentList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\DoctorDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\DoctorList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditAppointment.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditDepartment.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditDoctor.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditNurse.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditPatient.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\EditSchedule.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\Index.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\NurseDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\NurseList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\PatientDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\PatientList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\ScheduleDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\HospitalAdmin\ScheduleList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\AddAllotment.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\AllotmentDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\AllotmentList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\DepartmentDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\DepartmentList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\EditAllotment.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\Index.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\NurseDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\NurseList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\PatientDetails.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Nurses\PatientList.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Create.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Delete.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Details.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Edit.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\PricingPacks\Index.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\Admin_Layout.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\LoginPartial.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_DoctorLayout.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_HospitalAdminLayout.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_NursesLayout.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ViewImports.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ViewStart.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorTargetAssemblyInfo.cache
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.RazorTargetAssemblyInfo.cs
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.Views.pdb
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.csproj.CopyComplete
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.dll
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.pdb
+E:\Bitbuket\hospitalmanagement\Hospital\obj\Release\netcoreapp3.1\Hospital.genruntimeconfig.cache

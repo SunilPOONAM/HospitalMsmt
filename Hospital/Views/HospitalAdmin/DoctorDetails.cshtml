@@ -1,0 +1,186 @@
+﻿@*@model Hospital.Models.SubAdmin.Doctor*@
+@model Hospital.Models.ApplicationUser
+@{
+    ViewData["Title"] = "DoctorDetails";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+<style>
+    .export-pagination li a:hover {
+        background:#086972;
+        color:#fff;
+    }
+</style>
+
+    <nav aria-label="breadcrumb">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Doctor Details</li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h4 class="page-title page-title_main">Doctor Details</h4>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Widget Item -->
+                <div class="col-md-12">
+                    <div class="widget-area-2 proclinic-box-shadow">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h4> @Html.DisplayNameFor(model => model.FirstName)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.FirstName)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>  @Html.DisplayNameFor(model => model.DOB)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.DOB)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>    @Html.DisplayNameFor(model => model.Age)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Age)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>  @Html.DisplayNameFor(model => model.Specialization)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Specialization)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>   @Html.DisplayNameFor(model => model.Experience)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Experience)
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <h4>   @Html.DisplayNameFor(model => model.Email)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Email)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>     @Html.DisplayNameFor(model => model.PhoneNumber)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.PhoneNumber)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>@Html.DisplayNameFor(model => model.FaxNo)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.FaxNo)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>@Html.DisplayNameFor(model => model.Street)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Street)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4> @Html.DisplayNameFor(model => model.City)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.City)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>@Html.DisplayNameFor(model => model.State)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.State)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>@Html.DisplayNameFor(model => model.ZipCode)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.ZipCode)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>@Html.DisplayNameFor(model => model.Country)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Country)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>   @Html.DisplayNameFor(model => model.DoctorDetails)</h4>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.DoctorDetails)
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div>
+                                <a asp-action="EditDoctor" asp-route-id="@Model.Id" class="btn btn-success mb-3"><i class="fa fa-pencil m-r-5"></i> Edit Doctor</a>
+
+                                <a class="btn btn-danger mb-3" asp-controller="HospitalAdmin" asp-action="DoctorDelete" asp-route-id="@Model.Id" onclick="return confirm('Are you sure want to delete this appointment ?')"><i class="fa fa-trash-o m-r-5"></i> Delete Doctor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <nav aria-label="Page navigation example" style="padding-left: 39px; z-index: 2;">
+                        <ul class="pagination export-pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-download "></span> csv</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-printer"></span> print</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-file "></span> PDF</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-align-justify"></span> Excel</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+

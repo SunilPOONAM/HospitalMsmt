@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "FeaturesList";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<style>
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+        margin-top: -50px;
+    }
+</style>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+<link rel="stylesheet" href="~/admin/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+@*<link rel="stylesheet" href="~/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css">*@
+<!-- Theme style -->
+<!--<link rel="stylesheet" href="~/admin/css/AdminLTE.min.css">-->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
+
+<!-- Content Header (Page header) -->
+
+
+    <!-- Content Header (Page header) -->
+
+    <!-- Main content -->
+<section class="content content_row">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">
+                Features
+                <small>View all</small>
+            </h4>
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box">
+                <div class="box-header">
+                    <a asp-area="" asp-controller="Features" asp-action="AddFeature" class="btn btn-success feature_btn" style="float:right;">Add Feature</a>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive" style="background-color:#fff;font-size:13px;padding-top:5px;">
+                        <table id="FeatureGrid" class="display dataTable cell-border table-bordered" style="width: 100%;" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"><i class="fa fa-book"></i> Feature Name</th>
+                                    <th class="text-center"> <i class="fa fa-file-text" aria-hidden="true"></i>  Description</th>
+                                    <th class="text-center"><i class="fa fa-calendar"></i> Created Date</th>
+                                    <th class="text-center"> <i class="fa fa-key" aria-hidden="true"></i> IsActive</th>
+                                    <th class="text-center"><i class="fa fa-edit"></i> Edit</th>
+                                    <th class="text-center"><center> <i class="fa fa-trash-o"></i> Delete</center></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+</section>
+ 
+
+@section Scripts {
+    <script>
+        $('.treeview').removeClass('active');
+        $('.Feature').addClass('active');
+    </script>
+    @*<script src="~/admin/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="~/admin/plugins/datatables/dataTables.bootstrap.js"></script>*@
+    @*<script src="~/admin/js/pages/FeatureList.js"></script>*@
+    <script src="~/admin/js/pages/FeatureList.js"></script>
+    <script src="~/admin/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="~/admin/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+}

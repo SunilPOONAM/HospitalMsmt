@@ -1,0 +1,77 @@
+﻿@model Hospital.Models.SubAdmin.Patients
+
+@{
+    ViewData["Title"] = "PatientDetails";
+    Layout = "~/Views/Shared/_NursesLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Patients Details</h4>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Widget Item -->
+        <div class="col-md-12">
+            <div class="widget-area-2 proclinic-box-shadow">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td><h4> @Html.DisplayNameFor(model => model.PatientName) </h4></td>
+                                <td> @Html.DisplayFor(model => model.PatientName)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.Age)</h4></td>
+                                <td>  @Html.DisplayFor(model => model.Age) </td>
+                            </tr>
+                            <tr>
+                                <td>  <h4> @Html.DisplayNameFor(model => model.Gender)</h4></td>
+                                <td>   @Html.DisplayFor(model => model.Gender)</td>
+                            </tr>
+                            <tr>
+                                <td> <h4> @Html.DisplayNameFor(model => model.Email)</h4></td>
+                                <td>  @Html.DisplayFor(model => model.Email) </td>
+                            </tr>
+                            <tr>
+                                <td> <h4>@Html.DisplayNameFor(model => model.Phone)</h4></td>
+                                <td>   @Html.DisplayFor(model => model.Phone) </td>
+                            </tr>
+
+                            <tr>
+                                <td> <h4>  @Html.DisplayNameFor(model => model.DOB)</h4></td>
+                                <td> @Html.DisplayFor(model => model.DOB) </td>
+                            </tr>
+                            <tr>
+                                <td>  <h4> @Html.DisplayNameFor(model => model.IsActive)</h4></td>
+                                <td> @Html.DisplayFor(model => model.IsActive) </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination export-pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-download "></i> csv</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-printer"></i> print</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-file"></i> PDF</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-align-justify "></i> Excel</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div>
+                        @*<a asp-action="EditPatient" asp-route-id="@Model.PatientID" class="btn btn-success mb-3"><i class="fa fa-pencil m-r-5"></i>Edit Patients</a>*@
+                        <a class="btn btn-success mb-3" asp-controller="Nurses" asp-action="PatientDelete" asp-route-id="@Model.PatientID" onclick="return confirm('Are you sure want to delete this Patient ?')"><i class="fa fa-trash-o m-r-5"></i> Delete Patient</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

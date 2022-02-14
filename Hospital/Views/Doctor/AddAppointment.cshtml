@@ -1,0 +1,106 @@
+﻿@model Hospital.Models.SubAdmin.Appointments
+
+@{
+    ViewData["Title"] = "AddAppointment";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="page-title page-title_main">Add Appointment </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <form asp-action="AddAppointment">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-id-card" aria-hidden="true"></i> <label asp-for="PatientId" class="control-label"></label>
+                            <input asp-for="PatientId" class="form-control" required />
+                          
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-user-md"></i> <label asp-for="DoctorName" class="control-label"></label>
+                            <input asp-for="DoctorName" class="form-control" required />
+
+                            <span asp-validation-for="DoctorName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-building-o" aria-hidden="true"></i>  <label asp-for="Department" class="control-label"></label>
+                            <select asp-for="Department" class="form-control" required>
+                            <option value="">Select Department</option>
+                            <option value="Dentists">Dentists</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Opthalmology">Opthalmology</option>
+                            <option value="CancerDepartment">Cancer Department</option>
+                            <option value="ENTDepartment">ENT Department</option>
+                            <option value="Other">Other Department</option>
+                            </select>
+                            <span asp-validation-for="Department" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-id-badge" aria-hidden="true"></i> <label asp-for="TokenNumber" class="control-label"></label>
+                            <input type="number" asp-for="TokenNumber" class="form-control" required />
+                            <span asp-validation-for="TokenNumber" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <i class="fa fa-bug" aria-hidden="true"></i> <label asp-for="Problem" class="control-label"></label>
+                            <textarea asp-for="Problem" class="form-control" required></textarea>
+                            <span asp-validation-for="Problem" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-calendar" aria-hidden="true"></i><label asp-for="AppointmentDate" class="control-label"></label>
+                            <input type="date" asp-for="AppointmentDate" class="form-control" onkeydown="return false" required/>
+                            <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>  <label asp-for="TimeSlot" class="control-label"></label>
+                            <input type="time" asp-for="TimeSlot" class="form-control" reqired />
+                            <span asp-validation-for="TimeSlot" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-toggle-on" aria-hidden="true"></i> <label asp-for="AppointmentStatus" class="control-label"></label>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input asp-for="AppointmentStatus" class="form-check-input" type="radio" id="appointment_Active" value="Active" checked>
+                                <label class="form-check-label" for="appointment_Active">
+                                    Active
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="AppointmentStatus" class="form-check-input" type="radio" id="appointment_IsActive" value="IsActive">
+                                <label class="form-check-label" for="appointment_IsActive">
+                                    <i class="fa fa-gavel"></i>  IsActive
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-success submit-btn">Create Appointment</button>
+                    </div>
+</form>
+        </div>
+    </div>
+
+   </div>
+

@@ -1,0 +1,50 @@
+﻿@model Hospital.Models.ManageFAQViewModel
+@{
+    ViewData["Title"] = "AddFAQ";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Manage FAQ</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <form asp-controller="FAQ" asp-action="AddFAQ" method="post" >
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <i class="fa fa-question"></i> <label asp-for="Question"></label>
+                            <input asp-for="Question" class="form-control" placeholder="Enter Question" />
+                            <span asp-validation-for="Question" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <i class="fa fa-file" aria-hidden="true"></i> <label asp-for="Answer"></label>
+                            <textarea rows="+5" asp-for="Answer" class="form-control" placeholder="Enter Answer" ></textarea>
+                            <span asp-validation-for="Answer" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-t-20 text-center">
+                    <button class="btn btn-success submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+        {
+    <script>
+        $('.treeview').removeClass('active');
+        $('.FAQs').addClass('active');
+    </script>
+}

@@ -1,0 +1,177 @@
+﻿@model Hospital.Models.SubAdmin.Department
+
+@{
+    ViewData["Title"] = "AddDepartment";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+<style>
+    .moving-tab {
+        width: 35% !important;
+        position: absolute!important;
+        left: 350px!important;
+    }
+</style>
+@section scripts{
+    <script src="~/admin/js/pages/HospitalAdmin/AddPatients.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+}
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link rel="stylesheet" href="~/assets/css/form_wizard_css.css" />
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Department</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="page-title page-title_main">Department</h2>
+        </div>
+    </div>
+
+    <div class="image-container set-full-height">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 wizard_box">
+                    <!-- Wizard container -->
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="red" id="wizard">
+                            <form asp-action="AddDepartment">
+                                <input type="hidden" asp-for="HospitalID" value="@ViewBag.UserLoginID" />
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+                                <div class="wizard-navigation">
+                                    <ul>
+                                        <li><a href="#details" data-toggle="tab">Department</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+
+                                    <div class="tab-pane" id="details">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text">Please fill Department Detail</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-sm-12">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="DepartmentName" class="control-label"></label>
+                                                    <input asp-for="DepartmentName" class="form-control" />
+                                                    <span asp-validation-for="DepartmentName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Description" class="control-label"></label>
+                                                    <textarea asp-for="Description" class="form-control"></textarea>
+                                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <div class="form-group label-floating">
+
+                                                    <label class="display-block">DepartmentStatus</label>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input asp-for="DepartmentStatus" class="form-check-input" type="radio" id="department_Active" value="Active" checked>
+                                                        <label class="form-check-label" for="department_Active">
+                                                            Active
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input asp-for="DepartmentStatus" class="form-check-input" type="radio" id="department_IsActive" value="IsActive">
+                                                        <label class="form-check-label" for="department_IsActive">
+                                                            IsActive
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="wizard-footer">
+                                    <div class="pull-right">
+
+                                        <input type='button' class='btn btn-next btn-fill btn-wd' name='next' value='Next' />
+                                        @*<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />*@
+                                        <button class="btn btn-finish btn-fill btn-wd btn btn-success submit-btn">Add Department</button>
+                                    </div>
+                                    <div class="pull-left">
+                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> <!-- wizard container -->
+                </div>
+            </div> <!-- row -->
+        </div> <!--  big container -->
+
+    </div>
+
+
+
+
+
+    @*<div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <form asp-action="AddDepartment">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group">
+                                <label asp-for="DepartmentName" class="control-label"></label>
+                                <input asp-for="DepartmentName" class="form-control" />
+                                <span asp-validation-for="DepartmentName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label"></label>
+                                <textarea asp-for="Description" class="form-control"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="display-block">DepartmentStatus</label>
+
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="DepartmentStatus" class="form-check-input" type="radio" id="department_Active" value="Active" checked>
+                                    <label class="form-check-label" for="department_Active">
+                                        Active
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="DepartmentStatus" class="form-check-input" type="radio" id="department_IsActive" value="IsActive">
+                                    <label class="form-check-label" for="department_IsActive">
+                                        IsActive
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-success submit-btn">Add Department</button>
+                    </div>
+                </form>
+            </div>
+        </div>*@
+</div>

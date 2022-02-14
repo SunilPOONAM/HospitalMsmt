@@ -1,0 +1,118 @@
+﻿@using Hospital.Models
+@model Hospital.Models.AccountViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Role";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .input-container {
+        
+        display: flex;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .icon {
+        padding: 10px;
+        background: dodgerblue;
+        color: white;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+    }
+
+        .input-field:focus {
+            border: 2px solid dodgerblue;
+        }
+
+    /* Set a style for the submit button */
+    .btn {
+        background-color: dodgerblue;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+        .btn:hover {
+            opacity: 1;
+        }
+
+    .validate_text {
+        font-size: 15px;
+    }
+
+    .icone {
+        padding: 10px;
+        background: dodgerblue;
+        color: white;
+        min-width: 50px;
+        text-align: center;
+    }
+</style>
+
+<form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" style="max-width:500px;margin:auto;margin-top:100px;">
+
+    <div asp-validation-summary="All" class="text-danger validate_text"></div>
+    <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        @*<label asp-for="Email"></label>*@
+        <input asp-for="Email" class="input-field" placeholder="Email" autocomplete="off" />
+    </div>
+    <span asp-validation-for="Email" class="text-danger validate_text"></span>
+
+
+    @{ var list = new List<Hospital.Models.AccountViewModels.RegisterViewModel>
+                            {
+                                new Hospital.Models.AccountViewModels.RegisterViewModel {UserRole = "HospitalAdmin"},
+                                new Hospital.Models.AccountViewModels.RegisterViewModel {UserRole = "Doctor"},
+                                new Hospital.Models.AccountViewModels.RegisterViewModel {UserRole = "Nurse"},
+                            }; }
+    <div class="input-container">
+        <i class="fa fa-user-plus icone"></i>
+        @*<label for="role">User Role</label>*@
+        @Html.DropDownListFor(m => m.UserRole, new SelectList(list, "UserRole", "UserRole"), "--Select Role--", new { @id = "role" })
+        @*@Html.ValidationMessageFor(m => m.UserRole, "", new {@class = "text-danger"})*@
+    </div>
+
+    <div class="input-container">
+        <i class="fa fa-envelope icon"></i>
+        @*<label asp-for="Password"></label>*@
+        <input asp-for="Password" class="input-field" placeholder="Password" />
+    </div>
+    <span asp-validation-for="Password" class="text-danger validate_text"></span>
+
+    <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        @*<label asp-for="ConfirmPassword"></label>*@
+        <input asp-for="ConfirmPassword" class="input-field" placeholder="Confirm Password" />
+    </div>
+    <span asp-validation-for="ConfirmPassword" class="text-danger validate_text"></span>
+
+    <button type="submit" class="btn btn-success" style="margin-top:20px;">Register</button>
+</form>
+
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+<script>
+    $('.treeview').removeClass('active');
+    $('.Role').addClass('active');
+</script>
+}

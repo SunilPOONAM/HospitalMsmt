@@ -1,0 +1,230 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Hospital.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .drop {
+            position: absolute;
+            will-change: transform;
+            top: 0px;
+            left: 93px;
+            transform: translate3d(0px, 50px, 0px);
+        }
+
+        .user-menu .dropdown-menu {
+            min-width: 230px !important;
+        }
+
+        .dropdown-item:active {
+            background-color: #086972 !important;
+        }
+
+        .dropdown-item {
+            background-color: lightgray !important;
+        }
+
+        .dropdown-menu {
+            padding: 10px !important;
+        }
+
+        th {
+            background-color: #086972 !important;
+            color: white;
+        }
+
+        .table.custom-table > tbody > tr > td, .table.custom-table > tbody > tr > th, .table.custom-table > tfoot > tr > td, .table.custom-table > tfoot > tr > th, .table.custom-table > thead > tr > td, .table.custom-table > thead > tr > th {
+            text-align: center;
+        }
+
+        .faq_btn {
+            background-color: #086972 !important;
+            color: white !important;
+        }
+
+        input[type=text], input[type=password] {
+            border: 1px solid #9e9e9e;
+        }
+
+        .form-control {
+            border-color: #9e9e9e !important;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png">
+    <title>Super Administrator</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+  @RenderSection("Styles",required:false)
+    <environment names="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    </environment>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    @*DataTable JS*@
+    <script src="~/admin/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="~/admin/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    @RenderSection("Head", false)
+
+    @*Sweet alert CDN*@
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body id="toastMessage">
+    <div class="main-wrapper">
+        <div class="header" style="background-color: #086972">
+            <div class="header-left">
+                <a href="~/admin/" class="logo">
+                    <img src="~/assets/img/logo-2.png" width="35" height="30" alt=""> <span>SuperAdmin</span>
+                </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <ul class="nav user-menu float-right">
+
+                <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img">
+                            <img class="rounded-circle" src="~/assets/img/user.jpg" width="24" alt="Admin">
+                            <span class="status online"></span>
+                        </span>
+                        <span class="Username">@User.Identity.Name</span>
+                    </a>
+                    <div class="dropdown-menu" style=" position: absolute; will-change: transform; top: 0px; left: 93px; transform: translate3d(0px, 50px, 0px);">
+                        @*<a class="dropdown-item" href="profile.html">My Profile</a>
+                            <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                            <a class="dropdown-item" href="settings.html">Settings</a>*@
+                        <form class="dropdown-item" method="post" asp-controller="Account" asp-action="Logout" style="text-align: center;">
+                            <center>   <input type="submit" class="btn btn-secondary" value="Logout" /></center>
+                        </form>
+
+
+                    </div>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu float-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    @*<a class="dropdown-item" href="profile.html">My Profile</a>
+                        <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                        <a class="dropdown-item" href="settings.html">Settings</a>*@
+                    @*<a class="dropdown-item" href="login.html">Logout</a>*@
+                    <form class="dropdown-item" method="post" asp-controller="Account" asp-action="Logout">
+                        <input type="submit" class="btn btn-secondary" value="Logout" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu">
+                            <a href="@Url.Action("Index", "Home")"> <i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a>
+                        </li>
+                        <li class="treeview Dashboard menu">
+                            <a href="~/admin/"><img src="~/assets/img/dashboard.png" /> <span>Dashboard</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a asp-><i class="fa fa-user-md" style="color:#888888!important;"></i> <span>Hospital  </span><span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a asp-controller="Admin" asp-action="CreateHospital">Create Hospital </a></li>
+                                <li><a asp-controller="Admin" asp-action="ManageHospital">Manage  Hospital </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="~/HospitalAdmin/DoctorList"><i class="fa fa-tags"></i><span>Pricing Packages</span><span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="~/PricingPacks/Create">Add Packages</a></li>
+                                <li><a href="~/PricingPacks/Index">All Packages</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="~/HospitalAdmin/DoctorList"><i class="fa fa-user-md"></i> <span>Master</span><span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a asp-action="ManageCountry" asp-controller="Admin"> Country</a></li>
+                                <li><a asp-action="ManageState" asp-controller="Admin"> State</a></li>
+                                <li><a asp-action="AddCity" asp-controller="Admin"> City</a></li>
+                                <li><a asp-action="CreateRole" asp-controller="Admin"> Role</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="~/HospitalAdmin/DoctorList"><i class="fa fa-question"></i> <span>Manage FAQ</span><span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="~/FAQ/AddFaq">Add FAQ</a></li>
+                                <li><a href="~/admin/FAQList">All FAQ</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="~/HospitalAdmin/DoctorList"><i class="fa fa-th" aria-hidden="true"></i> <span>Feature</span><span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="~/Features/AddFeature">Add Feature</a></li>
+                                <li><a href="~/admin/FeaturesList">All Feature</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="~/admin/Chat_UI"><i class="fa fa-comments" aria-hidden="true"></i> <span>Chats</span></a>
+                        </li>
+                        <li class="treeview Customers">
+                            <a href="~/admin/GetUsers"><i class="fa fa-users" aria-hidden="true"></i> <span>Customers</span></a>
+                        </li>
+                        <li class="treeview Customers">
+                            <a href="~/admin/SubscribedUser"><i class="fa fa-users" aria-hidden="true"></i> <span>Subscribed Users</span></a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            @RenderBody()
+        </div>
+    </div>
+    
+    <div class="sidebar-overlay" data-reff=""></div>
+    @*<script src="~/assets/js/jquery-3.2.1.min.js"></script>*@
+    <script src="~/assets/js/popper.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/assets/js/Chart.bundle.js"></script>
+    <script src="~/assets/js/chart.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    <script>
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 1500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script> 
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

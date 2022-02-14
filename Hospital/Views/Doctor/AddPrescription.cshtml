@@ -1,0 +1,104 @@
+﻿    @model Hospital.Models.SubAdmin.PatientPrescriptionModel
+@{
+    ViewData["Title"] = "AddPrescription";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+<style>
+    .modal.show.modal-dialog {
+        margin-top: 181px;
+    }
+</style>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Add prescription</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <form asp-action="AddPrescription" id="addPrescriptionForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="patientId" />
+                <input type="hidden" asp-for="doctorId" />
+                <input type="hidden" asp-for="hospitalId" />
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <i class="fa fa-user-md"></i><label asp-for="DoctorName" class="control-label"></label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            @Html.DisplayFor(x => x.DoctorName)
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <i class="fa fa-user-md"></i><label asp-for="PatientName" class="control-label"></label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            @Html.DisplayFor(x => x.PatientName)
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label asp-for="prescription" class="control-label"></label>
+                            <textarea asp-for="prescription" class="form-control"></textarea>
+                            <span asp-validation-for="prescription" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-t-20 text-center">
+                    <button type="submit" class="btn btn-success submit-btn">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <table class="table  table-bordered" id="tblPrescription">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Patient name</th>
+                        <th>Prescription</th>
+                        <th>Is Read</th>
+                        <th>Created Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="editPrescriptionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Prescription</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="hdnRowIndex" />
+                <textarea id="edit-prescription" class="form-control"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btnUpdatePrescription">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/admin/js/pages/Doctor/AddPrescription.js"></script>
+}

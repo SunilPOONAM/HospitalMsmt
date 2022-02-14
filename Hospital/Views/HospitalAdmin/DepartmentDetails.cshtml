@@ -1,0 +1,69 @@
+﻿@model Hospital.Models.SubAdmin.Department
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Department Details</li>
+
+    </ol>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Department Details</h4>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Widget Item -->
+        <div class="col-md-12">
+            <div class="widget-area-2 proclinic-box-shadow">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td><h4>@Html.DisplayNameFor(model => model.DepartmentName)</h4></td>
+                                <td> @Html.DisplayFor(model => model.DepartmentName)</td>
+                            </tr>
+                            <tr>
+                                <td><h4> @Html.DisplayNameFor(model => model.Description)</h4></td>
+                                <td> @Html.DisplayFor(model => model.Description)</td>
+                            </tr>
+                            <tr>
+                                <td><h4> @Html.DisplayNameFor(model => model.DepartmentStatus)</h4></td>
+                                <td> @Html.DisplayFor(model => model.DepartmentStatus)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination export-pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-download "></span> csv</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-printer"></span> print</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-file "></span> PDF</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span class="fa fa-align-justify "></span> Excel</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <a asp-action="EditDepartment" asp-route-id="@Model.DepartmentID" class="btn btn-success mb-3"><i class="fa fa-pencil m-r-5"></i>Edit Department</a>
+
+                        <a class="btn btn-danger mb-3" asp-controller="HospitalAdmin" asp-action="DepartmentDelete" asp-route-id="@Model.DepartmentID" onclick="return confirm('Are you sure want to delete this Department?')"><i class="fa fa-trash-o m-r-5"></i> Delete Department</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            

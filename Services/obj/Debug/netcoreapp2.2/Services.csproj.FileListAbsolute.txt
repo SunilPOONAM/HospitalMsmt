@@ -1,0 +1,60 @@
+E:\BitBucketProject\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.deps.json
+E:\BitBucketProject\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.dll
+E:\BitBucketProject\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.pdb
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.dll
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.pdb
+E:\BitBucket\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.deps.json
+E:\BitBucket\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.dll
+E:\BitBucket\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.pdb
+E:\BitBucket\kanonkonect\Services\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.UI.dll
+E:\BitBucket\kanonkonect\Services\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\BitBucket\kanonkonect\Services\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.UI.xml
+E:\BitBucket\kanonkonect\Services\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\BitBucket\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.csproj.CoreCompileInputs.cache
+E:\BitBucket\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+E:\BitBucket\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+E:\BitBucket\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.csproj.CopyComplete
+E:\BitBucket\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.dll
+E:\BitBucket\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.pdb
+E:\BitBucket\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.csprojAssemblyReference.cache
+D:\Developer\Kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.deps.json
+D:\Developer\Kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.dll
+D:\Developer\Kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.pdb
+D:\Developer\Kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+D:\Developer\Kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+D:\Developer\Kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.dll
+D:\Developer\Kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.pdb
+D:\Developer\Kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.csprojAssemblyReference.cache
+D:\Anand\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.deps.json
+D:\Anand\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.dll
+D:\Anand\kanonkonect\Services\bin\Debug\netcoreapp2.2\Services.pdb
+D:\Anand\kanonkonect\Services\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.UI.dll
+D:\Anand\kanonkonect\Services\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Anand\kanonkonect\Services\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.UI.xml
+D:\Anand\kanonkonect\Services\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Anand\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.csprojAssemblyReference.cache
+D:\Anand\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.csproj.CoreCompileInputs.cache
+D:\Anand\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+D:\Anand\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+D:\Anand\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.csproj.CopyComplete
+D:\Anand\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.dll
+D:\Anand\kanonkonect\Services\obj\Debug\netcoreapp2.2\Services.pdb
+E:\GitHubProject\Hospital Management\hospitalmanagement\Services\bin\Debug\netcoreapp2.2\Services.deps.json
+E:\GitHubProject\Hospital Management\hospitalmanagement\Services\bin\Debug\netcoreapp2.2\Services.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Services\bin\Debug\netcoreapp2.2\Services.pdb
+E:\GitHubProject\Hospital Management\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.dll
+E:\GitHubProject\Hospital Management\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.pdb
+E:\GitHubProject\Hospital Management\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.csprojAssemblyReference.cache
+D:\NextOlive\hospitalmanagement\Services\bin\Debug\netcoreapp2.2\Services.deps.json
+D:\NextOlive\hospitalmanagement\Services\bin\Debug\netcoreapp2.2\Services.dll
+D:\NextOlive\hospitalmanagement\Services\bin\Debug\netcoreapp2.2\Services.pdb
+D:\NextOlive\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfoInputs.cache
+D:\NextOlive\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.AssemblyInfo.cs
+D:\NextOlive\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.csproj.CoreCompileInputs.cache
+D:\NextOlive\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.dll
+D:\NextOlive\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.pdb
+D:\NextOlive\hospitalmanagement\Services\obj\Debug\netcoreapp2.2\Services.csprojAssemblyReference.cache

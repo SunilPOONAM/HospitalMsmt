@@ -1,0 +1,112 @@
+﻿
+@model IEnumerable<Hospital.Models.SubAdmin.Patients>
+
+@{
+    ViewData["Title"] = "PatientList";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+<style>
+    .btn-success {
+        background-color: #086972!important;
+        border-color: #086972!important;
+    }
+    .table > tbody > tr > td {
+        font-weight: 300;
+        border: 1px solid #c5c5c5!important;
+    }
+</style>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Patients</h4>
+        </div>
+    </div>
+    @*<a href="/Doctor/AddDocument">Add Document</a>
+    <br/>
+    <a href="/Doctor/PatientPrescriptionList">Patient Prescription List</a>*@
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="table-responsive">
+                <table class="display table table-border" id="tblPatient">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="fa fa-wheelchair"></i> @Html.DisplayNameFor(model => model.PatientName)
+                            </th>
+                            <th>
+                                <i class="fa fa-line-chart" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.Age)
+                            </th>
+                            <th>
+                                <i class="fa fa-envelope" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th>
+                                <i class="fa fa-phone" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.Phone)
+                            </th>
+                            <th>
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.IsActive)
+                            </th>
+                            @*<th>Prescription</th>
+                                <th>Details</th>*@
+                            <th><i class="fa fa-gavel"></i> Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <a asp-action="AddPrescriptions" asp-route-id="@item.Id"><i class="fa fa-plus-circle m-r-5" style="font-size: 19px; color: forestgreen; float: left;" title="Add Priscription"></i></a>
+                                    <a asp-action="AddDocument" asp-route-id="@item.Id"><i class="fa fa-upload m-r-5" style="font-size: 19px; color: deepskyblue; float: left;" title="Upload Document"></i></a>
+                                    
+                                    @Html.DisplayFor(modelItem => item.PatientName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Age)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Phone)
+                                </td>
+                                <td>
+                                    @if (item.IsActive == "Active")
+                                    {
+                                        <span class="custom-badge status-green">
+                                            @Html.DisplayFor(modelItem => item.IsActive)
+                                        </span>
+                                    }
+                                    else if (item.IsActive == "IsActive")
+                                    {
+                                        <span class="custom-badge status-red">
+                                            @Html.DisplayFor(modelItem => item.IsActive)
+                                        </span>
+                                    }
+                                    else
+                                    {
+
+                                    }
+                                </td>
+                                <td class="text-center">
+
+                                    @*<a asp-action="EditPatient" asp-route-id="@item.PatientID"><i class="fa fa-pencil-square-o" style="font-size: 19px"></i></a> |*@
+                                    <a asp-action="PatientDetails" asp-route-id="@item.Id"><i class="fa fa-info-circle m-r-5" style="font-size: 19px; color: lightblue"></i></a>
+
+                                    @*<a asp-controller="HospitalAdmin" asp-action="PatientDelete" asp-route-id="@item.PatientID" onclick="return confirm('Are you sure want to delete this Patient?')"><i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red"></i></a>*@
+
+                                </td>
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+
+    <script src="~/admin/js/pages/Doctor/PrescriptionList.js"></script>
+}

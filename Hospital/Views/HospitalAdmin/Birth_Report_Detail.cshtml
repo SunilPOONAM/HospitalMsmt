@@ -1,0 +1,59 @@
+﻿@*@model Hospital.Models.SubAdmin.Nurse*@
+@model Hospital.Models.SubAdmin.NurseViewModel
+
+@{
+    ViewData["Title"] = "Birth Report Details";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+@section scripts{
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+}
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link rel="stylesheet" href="~/assets/css/form_wizard_css.css" />
+<style>
+    .btn.btn-danger.active:hover, .open > .btn.btn-danger.dropdown-toggle, .open > .btn.btn-danger.dropdown-toggle:focus, .open > .btn.btn-danger.dropdown-toggle:hover {
+        background-color: #ea236d!important;
+        color: #ea236d!important;
+    }
+</style>
+@Html.Raw(TempData["msg"])
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Birth Report Details</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Birth Report Details</h4>
+        </div>
+    </div>
+
+    <div class="row" style="border: 1px solid #b7b7b7; margin: 0px; padding: 10px;">
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2  col-xl-2">
+            <lable>Patient Id: <b> 001</b></lable>
+        </div>
+  
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3  col-xl-3">
+            <lable>Title: <b> Mr.Ram</b></lable>
+        </div>
+   
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3  col-xl-3">
+            <lable>Description:  <b> Patient condiditon is critical,undertaking patient consultations and physical examinations · organising workloads · performing surgical procedures</b></lable>
+        </div>
+    
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2  col-xl-2">
+            <lable>Doctor Name: <b> Dr.Akhilesh</b></lable>
+        </div>
+   
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2  col-xl-2">
+            <lable>Date:  <b>16-06-2021</b></lable>
+        </div>
+    </div>
+</div>
+
+

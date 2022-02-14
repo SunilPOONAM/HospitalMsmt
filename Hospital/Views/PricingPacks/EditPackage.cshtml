@@ -1,0 +1,84 @@
+﻿@model Hospital.Models.PricingPacks
+
+@{
+    ViewData["Title"] = "EditPackage";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <h4 class="page-title">Edit Packages</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <form asp-action="Update" asp-controller="PricingPacks" id="updatePackageForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="hidden" asp-for="id" />
+                            <input type="hidden" asp-for="IsDeleted" />
+                            <input type="hidden" asp-for="CreatedDate" />
+                            <input type="hidden" asp-for="IsActive" value="false" />
+                            <i class="fa fa-file-text-o" aria-hidden="true"></i> <label asp-for="PlanName" class="control-label"></label>
+                            <input type="text" asp-for="PlanName" class="form-control" />
+                            <span asp-validation-for="PlanName" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label asp-for="PlanType" class="control-label"></label>
+                            <i class="fa fa-asterisk" aria-hidden="true"></i>   <input type="radio" asp-for="PlanType" name="PlanType" value="@PlanType.Free" class="planType" /> Free
+                            <input type="radio" asp-for="PlanType" name="PlanType" value="@PlanType.Paid" class="planType" /> Paid
+                            <span asp-validation-for="PlanType" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>  <label asp-for="BillingPeroid" class="control-label"></label>
+                            <input type="text" asp-for="BillingPeroid" class="form-control" />
+                            <span asp-validation-for="BillingPeroid" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <i class="fa fa-money" aria-hidden="true"></i>   <label asp-for="Amount" class="control-label"></label>
+                            $<input type="number" min="0" asp-for="Amount" class="form-control" />
+                            <span asp-validation-for="Amount" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <i class="fa fa-file" aria-hidden="true"></i>  <label asp-for="Description" class="control-label"></label>
+                            <textarea asp-for="Description" class="form-control"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="m-t-20 text-center">
+                    <button type="submit" class="btn btn-success submit-btn">Create Packages</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/admin/js/pages/PricingPackages.js"></script>
+}

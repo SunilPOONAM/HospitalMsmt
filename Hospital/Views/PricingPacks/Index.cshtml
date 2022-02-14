@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Hospital.Models.PricingPacks>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<style>
+    table.dataTable thead th, table.dataTable thead td {
+        white-space: nowrap;
+    }
+    table.dataTable tbody th, table.dataTable tbody td {
+        vertical-align: middle;
+    }
+</style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin/index">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Pricing Packs</li>
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Pricing Packages</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <a asp-action="Create" class="btn btn btn-success btn-rounded float-right p_package_btn">Create New</a>
+            <div class="table-responsive">
+                <table class="table table-border" id="Tbl-PricingPackage">
+                    <thead>
+                        <tr>
+                            <th><i class="fa fa-id-card" aria-hidden="true"></i>S.No</th>
+                            <th>
+                                <i class="fa fa-life-ring" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.PlanName)
+                            </th>
+                            <th>
+                                <i class="fa fa-file" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.Description)
+                            </th>
+                            <th>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.BillingPeroid)
+                            </th>
+                            <th>
+                                <i class="fa fa-money" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.Amount)
+                            </th>
+                            <th>
+                                <i class="fa fa-list-alt" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.Features)
+                            </th>
+                            <th>
+                                <i class="fa fa-asterisk" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.PlanType)
+                            </th>
+                            <th>
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                                @Html.DisplayNameFor(model => model.IsActive)
+                            </th>
+                            <th>  <i class="fa fa-calendar" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.CreatedDate)</th>
+                            <th>  <i class="fa fa-calendar" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.ModifiedDate)</th>
+                            <th><i class="fa fa-gavel" aria-hidden="true"></i> Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script src="~/admin/js/pages/PricingPackages.js"></script>
+}

@@ -1,0 +1,7 @@
+E:\BitBucketProject\kanonkonect\Services\bin\Debug\netstandard2.0\Services.deps.json
+E:\BitBucketProject\kanonkonect\Services\bin\Debug\netstandard2.0\Services.dll
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netstandard2.0\Services.csprojAssemblyReference.cache
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netstandard2.0\Services.AssemblyInfoInputs.cache
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netstandard2.0\Services.AssemblyInfo.cs
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netstandard2.0\Services.dll
+E:\BitBucketProject\kanonkonect\Services\obj\Debug\netstandard2.0\Services.pdb

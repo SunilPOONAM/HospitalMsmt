@@ -1,0 +1,302 @@
+﻿@model Hospital.ViewModels.PatientViewModel
+
+@{
+    ViewData["Title"] = "AddPatient";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+@Html.Raw(TempData["msg"])
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link rel="stylesheet" href="~/assets/css/form_wizard_css.css" />
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create Patient</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Create Patient</h4>
+        </div>
+    </div>
+
+    <div class="image-container set-full-height">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <!-- Wizard container -->
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="red" id="wizard">
+                            <form class="" method="get">
+                                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+                                <div class="wizard-header">
+                                    <h3 class="wizard-title">
+                                        Add Patient Record
+                                    </h3>
+                                    <h5>This information will let us know more about you.</h5>
+                                </div>
+                                <div class="wizard-navigation">
+                                    <ul>
+                                        <li><a href="#details" data-toggle="tab">Personal Information</a></li>
+                                        <li><a href="#captain" data-toggle="tab">In case of emergency</a></li>
+                                        <li><a href="#description" data-toggle="tab">Review</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="details">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text">Please fill your personal information</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"> <i class="material-icons"></i></span>
+                                                    <div class="form-group label-floating">
+                                                        <label asp-for="PatientID" class="control-label"></label>
+                                                        @Html.DisplayFor(m => m.PatientID)
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"> <i class="material-icons"></i></span>
+                                                    <div class="form-group label-floating">
+                                                        <label asp-for="PatientName" class="control-label"></label>
+                                                        <input asp-for="PatientName" type="text" class="form-control">
+                                                        <span asp-validation-for="PatientName" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons"></i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label asp-for="Phone" class="control-label"></label>
+                                                        <input asp-for="Phone" type="number" class="form-control">
+                                                        <span asp-validation-for="PatientName" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="form-group label-floating">
+                                                        <span>
+                                                            <label asp-for="Gender" class="control-label"></label>
+                                                            <input asp-for="Gender" type="radio" value="Male" />Male
+                                                            <input asp-for="Gender" type="radio" value="Female" />Female
+                                                        </span>
+                                                        <span asp-validation-for="Gender" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons"></i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label asp-for="Address" class="control-label"></label>
+                                                        <textarea asp-for="Address" type="text" class="form-control"></textarea>
+                                                        <span asp-validation-for="PatientName" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="CountryId" class="control-label"></label>
+                                                    <select asp-for="CountryId" class="form-control">
+                                                        <option disabled="" selected=""></option>
+                                                        <option value="1"> Afghanistan </option>
+                                                        <option value="2"> Albania </option>
+                                                        <option value="3"> Algeria </option>
+                                                        <option value="3"> American Samoa </option>
+                                                        <option value="4"> Andorra </option>
+                                                        <option value="5"> Angola </option>
+                                                        <option value="6"> Anguilla </option>
+                                                        <option value="7"> Antarctica </option>
+                                                    </select>
+                                                    <span asp-validation-for="CountryId" class="text-danger"></span>
+                                                </div>
+                                                @*<div class="form-group label-floating">
+                                                    <label asp-for="StateId" class="control-label"></label>
+                                                    <select asp-for="StateId" asp-items="@(new SelectList(Model.StateMasters,"Id","StateName"))" class="form-control"></select>
+                                                    <span asp-validation-for="StateId" class="text-danger"></span>
+                                                </div>
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="CityId" class="control-label"></label>
+                                                    <select asp-for="CityId" asp-items="@(new SelectList(Model.CityMasters,"Id","CityName"))" class="form-control"></select>
+                                                    <span asp-validation-for="CityId" class="text-danger"></span>
+                                                </div>*@
+
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="ZipCode" class="control-label"></label>
+                                                    <input asp-for="ZipCode" class="form-control" />
+                                                    <span asp-validation-for="ZipCode" class="text-danger"></span>
+                                                </div>
+
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Street" class="control-label"></label>
+                                                    <input asp-for="Street" class="form-control" />
+                                                    <span asp-validation-for="Street" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane" id="captain">
+                                        @*<h4 class="info-text">What type of room would you want? </h4>*@
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text"> Fill details for emergency contact</h4>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons"></i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label asp-for="Phone" class="control-label"></label>
+                                                        <input asp-for="Phone" type="text" class="form-control">
+                                                        <span asp-validation-for="Street" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons"></i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label asp-for="Address" class="control-label"></label>
+                                                        <textarea asp-for="Address" class="form-control"></textarea>
+                                                        <span asp-validation-for="Address" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="tab-pane" id="description">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text"> Your Full Details Will be here</h4>
+                                            </div>
+                                            @*<div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"> <i class="material-icons"></i></span>
+                                                            <div class="form-group label-floating">
+                                                                <label asp-for="PatientID" class="control-label"></label>
+                                                                @Html.DisplayFor(m => m.PatientID)
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"> <i class="material-icons"></i></span>
+                                                            <div class="form-group label-floating">
+                                                                <label asp-for="PatientName" class="control-label"></label>
+                                                                @Html.DisplayFor(m => m.PatientName)
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons"></i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label asp-for="Phone" class="control-label"></label>
+                                                                @Html.DisplayFor(m => m.Phone)
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <div class="form-group label-floating">
+                                                                <label asp-for="Gender" class="control-label"></label>
+                                                                @Html.DisplayFor(m => m.Gender)
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons"></i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label asp-for="Address" class="control-label"></label>
+                                                                @Html.DisplayFor(m => m.Address)
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons"></i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label asp-for="Address" class="control-label"></label>
+                                                                @Html.DisplayFor(m => m.Address)
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group label-floating">
+                                                            <label asp-for="Country" class="control-label"></label>
+                                                            @Html.DisplayFor(m => m.Country)
+                                                        </div>
+                                                        <div class="form-group label-floating">
+                                                            <label asp-for="State" class="control-label"></label>
+                                                            @Html.DisplayFor(m => m.State)
+                                                        </div>
+                                                        <div class="form-group label-floating">
+                                                            <label asp-for="City" class="control-label"></label>
+                                                            @Html.DisplayFor(m => m.City)
+                                                        </div>
+
+                                                        <div class="form-group label-floating">
+                                                            <label asp-for="ZipCode" class="control-label"></label>
+                                                            @Html.DisplayFor(m => m.ZipCode)
+                                                        </div>
+
+                                                        <div class="form-group label-floating">
+                                                            <label asp-for="Street" class="control-label"></label>
+                                                            @Html.DisplayFor(m => m.Street)
+                                                        </div>
+                                                    </div>
+                                                </div>*@
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wizard-footer">
+                                    <div class="pull-right">
+
+                                        <input type='button' class='btn btn-next btn-fill btn-wd' name='next' value='Next' />
+                                        <input type='button' class='btn btn-finish btn-fill btn-wd' name='finish' value='Finish' />
+                                    </div>
+                                    <div class="pull-left">
+                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> <!-- wizard container -->
+                </div>
+            </div> <!-- row -->
+        </div> <!--  big container -->
+
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/admin/js/pages/HospitalAdmin/AddPatients.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+}

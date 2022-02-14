@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Hospital.Models.PatientPrescription>
+
+@{
+    ViewData["Title"] = "PrescriptionList";
+    Layout = "~/Views/Shared/_NursesLayout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Nurses/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Prescription List</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="page-title page-title_main">Prescription Lists</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            @*<a asp-action="AddAppointment" class="btn btn-success btn-rounded float-right add_appointment"><i class="fa fa-plus"></i> Add Appointment  </a>*@
+            <div class="table-responsive">
+                <table class="table table-border table-striped custom-table datatable mb-0">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="fa fa-id-card" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.patientId)
+                            </th>
+                            <th>
+                                <i class="fa fa-user-md"></i>    Nurse ID
+                            </th>
+                            <th>
+                                <i class="fa fa-user-md"></i>    @Html.DisplayNameFor(model => model.Reference)
+                            </th>
+                            <th>
+                                <i class="fa fa-bug" aria-hidden="true"></i>    @Html.DisplayNameFor(model => model.VisitingFees)
+                            </th>
+                            <th>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.createdDate)
+                            </th>
+                            
+                            <th class="text-center">
+                                <i class="fa fa-gavel"></i>    Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                <a asp-action="PatientPrescriptionList" asp-route-id="@item.Id"><i class="fa fa-bars m-r-5" style="font-size: 19px; color: forestgreen; float: left;" title="Patient Priscriptions"></i></a>
+                                @Html.DisplayFor(modelItem => item.patientId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.doctorId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Reference)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VisitingFees)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.createdDate)
+                            </td>
+
+
+                            <td class="text-center">
+                                <a asp-action="EditAppointment" asp-route-id="@item.Id"><i class="fa fa-pencil-square-o" style="font-size: 19px"></i></a> |
+                                <a asp-action="AppointmentDetails" asp-route-id="@item.Id"><i class="fa fa-info-circle m-r-5" style="font-size: 19px; color: lightblue"></i></a> |
+                                <a asp-controller="HospitalAdmin" asp-action="AppointmentDelete" asp-route-id="@item.Id" onclick="return confirm('Are you sure want to delete this Appointment?')"><i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red"></i></a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

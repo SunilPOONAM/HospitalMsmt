@@ -1,0 +1,6 @@
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Hospital\Debug\netcoreapp3.1\staticwebassets\Hospital.StaticWebAssets.Manifest.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Hospital\Debug\netcoreapp3.1\staticwebassets\Hospital.StaticWebAssets.xml
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Hospital\Debug\netcoreapp3.1\Hospital.RazorAssemblyInfo.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Hospital\Debug\netcoreapp3.1\Hospital.RazorAssemblyInfo.cs
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Hospital\Debug\netcoreapp3.1\Hospital.AssemblyInfoInputs.cache
+E:\GitHubProject\Hospital Management\hospitalmanagement\.vs\Hospital\v16\lut\0\i\Hospital\Debug\netcoreapp3.1\Hospital.AssemblyInfo.cs

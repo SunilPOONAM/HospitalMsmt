@@ -1,0 +1,262 @@
+﻿
+@{
+    ViewData["Title"] = "AboutUs Page";
+}
+
+<style>
+
+    .servis {
+        width: 285px;
+        text-align: center;
+        box-shadow: 0px 0px 5px 5px;
+        background-color: aqua;
+        float: left;
+        margin: 20px;
+    }
+
+    .head {
+        height: 50px;
+        background-color: beige;
+        font-size: 35px;
+    }
+
+    .desc {
+        height: auto;
+        font-size: 20px;
+    }
+
+    .price {
+        background-color: azure;
+    }
+
+    /*plans tiles*/
+    .block.block-bordered {
+        border: 1px solid #e6ebf4;
+        box-shadow: 0px 0px 5px 1px;
+    }
+
+    .block-header {
+        font-weight: bold;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: .75rem 1.25rem;
+        transition: opacity .25s ease-out;
+    }
+
+    .bg-body-light {
+        background-color: #f9fafc !important;
+        padding-bottom: 20px;
+    }
+
+    .block-content {
+        transition: opacity .25s ease-out;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.25rem 1.25rem 1px;
+        overflow-x: visible;
+    }
+
+    .bg-body-light {
+        background-color: #f9fafc;
+        padding-bottom: 20px;
+    }
+
+    .btn-hero-secondary.disabled, .btn-hero-secondary:disabled {
+        color: #fff;
+        background-color: #111;
+    }
+
+    .btn.disabled, .btn:disabled {
+        opacity: .65;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+
+    .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xl-6 {
+        width: 50%;
+        float:left;
+    }
+
+    .block-header h3 {
+        text-align: center !important;
+    }
+
+    .btn_plan_box {
+        background-color: #086972 !important;
+        color: white;
+    }
+
+        .btn_plan_box a {
+            color: white;
+        }
+
+        .btn_plan_box .btn-price {
+            display: inline-block !important;
+            padding: 10px 30px !important;
+            font-weight: 300 !important;
+            text-decoration: none !important;
+            border-radius: 100px !important;
+            -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s !important;
+        }
+
+</style>
+
+<body id="registerAlert" style="overflow:hidden;">
+
+    <div>
+        @Html.Partial("_HeaderPartial")
+    </div>
+
+    <section class="section-steps" style="padding-bottom: 70px;">
+        <div class="row">
+            <h2>About Us</h2>
+        </div>
+        <!--<div class="row">
+
+          <div class="col span-1-of-2 step-box" data-aos="fade-left">
+              <div class="works-step">
+                  <div>1</div>
+                  <p class="text_mng">Hopital Management System (HMS) is open to all patients every day and provides fundamental medical care and cutting-edge medicine.</p>
+              </div>
+              <div class="works-step">
+                  <div>2</div>
+                  <p class="text_mng">We use our academic knowledge to treat a wide range of health issues, taking a personal touch and utilizing highly specialized and up-to-date research.</p>
+              </div>
+              <div class="works-step">
+                  <div>3</div>
+                  <p class="text_mng">
+                      We will innovate and define the future of health care for generations
+                      and will be the consumer's first choice for health care.
+                  </p>
+              </div>
+          </div>
+          <div class="col span-1-of-2 step-box" data-aos="fade-right">
+              <center>
+                  <img src="~/Layout/resources/img/app-iPhone.png" alt="Omnifood app on iphone" class="img-responsive1 js-wp-2">
+              </center>
+          </div>
+      </div>
+      -->
+        <div class="row row_about_us">
+
+            <div class="col-md-12" data-aos="fade-left">
+                <div class="works-step">
+                    <p class="text_mng">
+                        <strong>Hopital Management System (HMS)</strong> is open to all patients every day and provides fundamental medical care and cutting-edge medicine.
+                        We will innovate and define the future of health care for generations
+                        and will be the consumer's first choice for health care.
+                        We use our academic knowledge to treat a wide range of health issues, taking a personal touch and utilizing highly specialized and up-to-date research.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row about_row">
+            <div class="about-box col-md-6" data-aos="fade-left">
+                <div class="img-block">
+                    <img src="~/assets/img/team.jpg" class="img-responsive about_img" />
+                </div>
+            </div>
+            <div class="about-box col-md-6" data-aos="fade-right">
+                <div class="content-block">
+                    <div class="about_content">
+                        <h3 class="heading-1">About Our Team</h3>
+                        <p class="text_mng">
+                            Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.
+
+                            We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about_row desktop_view">
+
+            <div class="about-box col-md-6" data-aos="fade-right">
+                <div class="content-block">
+                    <div class="about_content">
+                        <h3 class="heading-1">Our Vission & Mission</h3>
+                        <p class="text_mng">
+                            Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.
+
+                            We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-box col-md-6" data-aos="fade-left">
+                <div class="img-block">
+                    <img src="~/assets/img/vission.jpg" class="img-responsive about_img" />
+                </div>
+            </div>
+        </div>
+        <div class="row about_row mobile_view">
+            <div class="about-box col-md-6" data-aos="fade-left">
+                <div class="img-block">
+                    <img src="~/assets/img/vission.jpg" class="img-responsive about_img" />
+                </div>
+            </div>
+            <div class="about-box col-md-6" data-aos="fade-right">
+                <div class="content-block">
+                    <div class="about_content">
+                        <h3 class="heading-1">Our Vission & Mission</h3>
+                        <p class="text_mng">
+                            Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.
+
+                            We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about_row">
+            <div class="about-box col-md-6" data-aos="fade-left">
+                <div class="img-block">
+                    <img src="~/assets/img/promise.jpg" class="img-responsive about_img" />
+                </div>
+            </div>
+            <div class="about-box col-md-6" data-aos="fade-right">
+                <div class="content-block">
+                    <div class="about_content">
+                        <h3 class="heading-1">We Promise</h3>
+                        <p class="text_mng">
+                            Our Orthopedicians trained at the top centres worldwide, bring with them the latest and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipments, operating rooms, recovery areas and advanced Physical therapy facilities.
+
+                            We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @section Scripts {
+        @await Html.PartialAsync("_ValidationScriptsPartial")
+    }
+
+    @Html.Partial("_FooterPartial")
+
+</body>

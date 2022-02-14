@@ -1,0 +1,137 @@
+a, a:hover, a:active, a:focus {
+    color: #000;
+}
+.skin-blue .main-header .navbar {
+    background-color: #d2ad68 !important;
+}
+.skin-blue .main-header .logo {
+    background-color: #c39e5a !important;
+}
+.btn-default, .btn-primary, .btn-info, .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #d2ad68;
+    border-color: #d2ad68;
+    color: #fff;
+}
+.skin-blue .wrapper{
+    background-color: #ffffff;
+}
+.btn-default:hover, .btn-default:active, .btn-default.hover, .btn-primary:hover, .btn-primary:active, .btn-primary.hover, .btn-info:hover, .btn-info:active, .btn-info.hover, .btn-primary.focus, .btn-primary:focus {
+    background: #fff;
+    color: #d2ad68;
+    border: 1px solid #d2ad68;
+}
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: #d2ad68;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: white !important;
+    border: 1px solid transparent !important;
+    background-color: transparent;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #fff));
+    background: -webkit-linear-gradient(top, #fff 0%, #fff 100%);
+    background: -moz-linear-gradient(top, #fff 0%, #fff 100%);
+    background: -ms-linear-gradient(top, #fff 0%, #fff 100%);
+    background: -o-linear-gradient(top, #fff 0%, #fff 100%);
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%) !important;
+}
+.card-header.card-header-primary {
+    border-radius: 6px !important;
+    background: #d2ad68 !important;
+    color: #fff;
+}
+.content {
+    min-height: auto;
+    margin-top: 20px;
+}
+section.chart-div {
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+button.button.button-contactForm {
+    background-color: #d2ad68;
+    border-color: #d2ad68;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    border: 1px;
+    box-shadow: 0px 0px 0px 0px #fff;
+    outline: none;
+    color: #fff;
+}
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+    border-left-color: #d2ad68;
+}
+.form-control:focus {
+    border-color: #d2ad68;
+    box-shadow: none;
+}
+table.dataTable thead .sorting_desc {
+    background-image: none;
+}
+#Report_length label {
+    margin: 0px 15px;
+}
+
+div#Report_length label:first-child {
+    margin-left: 3px;
+}
+
+#Report_length select#month, #Report_length select#year {
+    margin-left: 5px;
+}
+
+div#UserGrid_length label {
+    margin: 5px 10px;
+}
+
+/*div#UserGrid_length {
+    width: 600px;
+}*/
+#PricingPlanGrid .form-control[readonly] {
+    background: none !important;
+}
+button#addNewPackage {
+    position: absolute;
+    right: 15px;
+    top: -10px;
+}
+table#PricingPackageGrid, table#PricingPlanGrid {
+    max-height: 375px;
+    height: 375px;
+    overflow-y: auto;
+    display: block;
+}
+.skin-blue .main-header li.user-header {
+    background-color: #d2ad68;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-default {
+    color: #ffffff;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-default {
+    color: #bc9b5e;
+}
+div.dt-buttons {
+    position: relative;
+    float: left;
+    top: 35px;
+}
+button.dt-button.buttons-excel, button.dt-button.buttons-print {
+    background: #d2ad68;
+    border: #d2ad68;
+    color: #fff;
+    border-radius: 5px;
+}
+    button.dt-button.buttons-excel:hover, button.dt-button.buttons-print:hover {
+        background-color: #fff !important;
+        background-image: none !important;
+        color: #d2ad68;
+        border: 1px solid #d2ad68 !important;
+    }
+.dataTables_wrapper .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}

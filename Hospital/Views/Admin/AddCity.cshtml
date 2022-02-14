@@ -1,0 +1,93 @@
+﻿@model Hospital.Models.CityMaster
+@{
+    ViewData["Title"] = "AddCity";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin/index">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add City</li>
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <h4 class="page-title page-title_main">Add City </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <form asp-action="AddCity" asp-controller="Admin" id="addCityForm" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="Id" type="hidden" />
+                <input asp-for="IsActive" type="hidden"  value="true" />
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <i class="fa fa-map" aria-hidden="true"></i> <label asp-for="CountryId" class="control-label"></label>
+                            <select asp-for="CountryId" class="form-control">
+                                @foreach (var item in ViewBag.CountryList)
+                                {
+                                    <option value="@item.Id">@item.CountryName</option>
+                                }
+                            </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <i class="fa fa-map" aria-hidden="true"></i> <label asp-for="StateId" class="control-label"></label>
+                            <select asp-for="StateId" class="form-control">
+                                @foreach (var item in ViewBag.stateList)
+                                {
+                                    <option value="@item.Id">@item.StateName</option>
+                                }
+                            </select>
+                            <span asp-validation-for="StateId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <i class="fa fa-building-o" aria-hidden="true"></i> <label asp-for="CityName" class="control-label"></label>
+                            <input asp-for="CityName" class="form-control" placeholder="City Name" autocomplete="off" />
+                            <span asp-validation-for="CityName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <div class="state_btn text-left">
+                                <button class="btn btn-success submit-btn" type="submit">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <h4 class="page-title"><i class="fa fa-list"></i> Manage City </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <table id="Tbl_CityMaster" class="display dataTable cell-border table-bordered">
+                <thead>
+                    <tr>
+                        <th><i class="fa fa-id-card" aria-hidden="true"></i>  S.No</th>
+                        <th><i class="fa fa-map" aria-hidden="true"></i>  Country </th>
+                        <th><i class="fa fa-map" aria-hidden="true"></i>  State </th>
+                        <th><i class="fa fa-building-o" aria-hidden="true"></i>  City</th>
+                        <th> <i class="fa fa-gavel"></i>Action</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/admin/js/pages/AddCity.js"></script>
+}

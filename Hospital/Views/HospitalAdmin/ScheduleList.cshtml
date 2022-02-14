@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Hospital.Models.SubAdmin.Schedule>
+
+@{
+    ViewData["Title"] = "ScheduleList";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Schedule List</li>
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Schedules List</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <a asp-action="AddSchedule" class="btn btn-success btn-rounded float-right add_appointment"><i class="fa fa-plus"></i> Add Schedule</a>
+            <div class="table-responsive">
+                <table class="table table-border table-striped custom-table datatable mb-0">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                <i class="fa fa-user-md"></i>      @Html.DisplayNameFor(model => model.Doctor)
+                            </th>
+
+                            <th>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.AvailableStartDay)
+                            </th>
+                            <th>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.AvailableEndDay)
+                            </th>
+                            <th>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.AvailableStartTime)
+                            </th>
+                            <th>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>    @Html.DisplayNameFor(model => model.AvailableEndTime)
+                            </th>
+                            <th>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>    @Html.DisplayNameFor(model => model.TimePerPatient)
+                            </th>
+                            <th>
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.Status)
+                            </th>
+                            <th class="text-center">
+                                <i class="fa fa-gavel"></i>   Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Doctor)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AvailableStartDay)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AvailableEndDay)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AvailableStartTime)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AvailableEndTime)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TimePerPatient)
+                                </td>
+                                <td>
+                                    @if (item.Status == "Active")
+                                    {
+                                        <span class="custom-badge status-green">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </span>
+                                    }
+                                    else if (item.Status == "IsActive")
+                                    {
+                                        <span class="custom-badge status-red">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </span>
+                                    }
+                                    else
+                                    {
+
+                                    }
+
+                                </td>
+                                <td class="text-right">
+
+                                    <a asp-action="EditSchedule" asp-route-id="@item.Id"><i class="fa fa-pencil-square-o" style="font-size: 19px"></i></a> |
+                                    <a asp-action="ScheduleDetails" asp-route-id="@item.Id"><i class="fa fa-info-circle m-r-5" style="font-size: 19px; color: lightblue"></i></a> |
+                                    <a asp-controller="HospitalAdmin" asp-action="ScheduleDelete" asp-route-id="@item.Id" onclick="return confirm('Are you sure want to delete this schedule?')"><i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

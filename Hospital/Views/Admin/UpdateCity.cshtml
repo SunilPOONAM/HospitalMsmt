@@ -1,0 +1,55 @@
+﻿@model Hospital.Models.CityMaster
+@{
+    ViewData["Title"] = "UpdateCity";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin/index">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Update City</li>
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <h4 class="page-title">Add State </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <form asp-action="AddCity" asp-controller="Admin" id="updateCityForm" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="Id" type="hidden" />
+                <input asp-for="IsActive" type="hidden" value="true" />
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="StateId" class="control-label"></label>
+                            <select asp-for="StateId" asp-items="@(new SelectList(Model.States,"Id","StateName"))" class="form-control"></select>
+                            <span asp-validation-for="StateId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="CityName" class="control-label"></label>
+                            <input asp-for="CityName" class="form-control" placeholder="State Name" autocomplete="off" />
+                            <span asp-validation-for="CityName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <div class="m-t-20 text-left">
+                                <button class="btn btn-success submit-btn" type="submit">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/admin/js/pages/AddCity.js"></script>
+}

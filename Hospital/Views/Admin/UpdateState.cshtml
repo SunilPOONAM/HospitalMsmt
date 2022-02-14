@@ -1,0 +1,47 @@
+﻿@model Hospital.Models.StateMaster
+@{
+    ViewData["Title"] = "UpdateState";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin/index">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Update State</li>
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <h4 class="page-title">Add State </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <form asp-action="ManageState" asp-controller="Admin" id="updateState" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input asp-for="Id" type="hidden" />
+                            <input  asp-for="IsActive" type="hidden"/>
+                            <label asp-for="StateName" class="control-label"></label>
+                            <input asp-for="StateName" type="text" class="form-control" placeholder="State Name" autocomplete="off" />
+                            <span asp-validation-for="StateName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="m-t-20 text-left">
+                                <button class="btn btn-success submit-btn" type="submit">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section scripts{ 
+    <script src="~/admin/js/pages/ManageState.js"></script>
+} 
+

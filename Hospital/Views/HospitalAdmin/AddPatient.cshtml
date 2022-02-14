@@ -1,0 +1,462 @@
+﻿@model Hospital.ViewModels.PatientViewModel
+
+@{
+    ViewData["Title"] = "AddPatient";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+@Html.Raw(TempData["msg"])
+@section scripts{
+    <script src="~/admin/js/pages/HospitalAdmin/AddPatients.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+}
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link rel="stylesheet" href="~/assets/css/form_wizard_css.css" />
+<style>
+    textarea {
+        border-color: #c7c7c7 !important;
+        border-radius:5px;
+    }
+</style>
+@{
+    if (ViewBag.isSuccess != null)
+    {
+        if (ViewBag.isSuccess == true)
+        {
+            <script>
+                window.onload = function () {
+                    Swal.fire({
+                        title: 'Patient successfully added.',
+                        text: "",
+                        icon: 'success',
+                        showCancelButton: false,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'OK',
+                        onClose: function () {
+                            window.location = "Hostpitalpatients";
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location = "Hostpitalpatients";
+                        }
+                    });
+                }
+            </script>
+        }
+    }
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index" class="main_page">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Patient</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12 offset-lg-12">
+            <h4 class="page-title page-title_main">Add OPD Patient</h4>
+        </div>
+    </div>
+
+
+    @*<a asp-controller="HospitalAdmin" asp-action="AddPrescription"><button>click me</button></a>*@
+
+    <div class="image-container set-full-height">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 wizard_box">
+                    <!-- Wizard container -->
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="red" id="wizard">
+                            <form asp-action="AddPatient">
+                                <div class="col-sm-6">
+                                    <div class="form-group label-floating">
+                                        <label asp-for="PatientID" class="control-label"></label>
+                                        <input asp-for="PatientID" value="@Model.PatientID" class="form-control" readonly />
+                                    </div>
+                                </div>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+                                <div class="wizard-navigation">
+                                    <ul>
+                                        <li><a href="#details" data-toggle="tab">Personal Information</a></li>
+                                        <li><a href="#ContactInformation" data-toggle="tab">Contact Information</a></li>
+                                        <li><a href="#Address" data-toggle="tab">Address</a></li>
+                                        <li><a href="#otherDetail" data-toggle="tab">Emergency Contact</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab-content">
+
+                                    <div class="tab-pane" id="details">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text">Please fill your personal information</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Patient Type</label>
+                                                    <select asp-for="Patient_Type" class="form-control">
+                                                        <option selected="selected"></option>
+                                                        <option value="New">New</option>
+                                                        <option value="Old">Old</option>
+                                                    </select>
+                                                    <span asp-validation-for="Patient_Type" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="PatientName" class="control-label"></label>
+                                                    <input asp-for="PatientName" class="form-control" required />
+                                                    <span asp-validation-for="PatientName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="DOB" class="control-label"></label>
+                                                    <input type="date" asp-for="DOB" id="DOB" onkeydown="return false" onchange="ageCalculator();" class="form-control " required />
+                                                    <input type="hidden" asp-for="Age" id="result" class="form-control" readonly />
+                                                    <span asp-validation-for="DOB" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                             <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Patient_Visit_Status" class="control-label"></label>
+                                                    <select asp-for="Patient_Visit_Status" class="form-control">
+                                                        <option selected></option>
+                                                        <option value="Walk In Appointment">Walk In Appointment</option>
+                                                        <option value="Call In Appointment">Call In Appointment</option>
+                                                    </select>
+                                                    <span asp-validation-for="Patient_Visit_Status" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <div class="form-group">
+                                                        <label>Gender</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input asp-for="Gender" class="form-check-input" type="radio" id="patient_male" value="Male" checked>
+                                                        <label class="form-check-label" for="patient_male">
+                                                            Male
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input asp-for="Gender" class="form-check-input" type="radio" id="patient_female" value="Female">
+                                                        <label class="form-check-label" for="patient_female">
+                                                            Female
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <div class="form-group">
+                                                        <i class="fa fa-medkit" style="color:#6d6d6d" aria-hidden="true"></i>   <label>Availablity</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label" for="docotr_available">
+                                                            Available
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input asp-for="IsActive" class="form-check-input" type="radio" id="Patient_Active" value="Active" checked>
+                                                        <label class="form-check-label" for="Patient_Active">
+                                                            Active
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input asp-for="IsActive" class="form-check-input" type="radio" id="Patient_IsActive" value="Not Active">
+                                                        <label class="form-check-label" for="Patient_IsActive">
+                                                            Not Active
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="tab-pane" id="ContactInformation">
+                                        @*<h4 class="info-text">What type of room would you want? </h4>*@
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text">Contact Information</h4>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Email" class="control-label"></label>
+                                                    <input type="email" asp-for="Email" class="form-control" />
+                                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Phone" class="control-label"></label>
+                                                    <input type="text" asp-for="Phone" min="0" class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+                                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Occupation" class="control-label"></label>
+                                                    <input type="text" asp-for="Occupation" class="form-control" />
+                                                    <span asp-validation-for="Occupation" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Payment_Type" class="control-label"></label>
+                                                    <select asp-for="Payment_Type" class="form-control">
+                                                        <option selected></option>
+                                                        <option value="Cash">Cash</option>
+                                                        <option value="Insurance">Insurance</option>
+                                                    </select>
+                                                    <span asp-validation-for="Patient_Visit_Status" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="tab-pane" id="Address">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text">Address</h4>
+                                            </div>
+
+                                            <div class="col-sm-6">
+
+
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="CountryName" class="control-label"></label>
+
+                                                    <select asp-for="CountryId" class="form-control" onchange="getStates(this.value)">
+                                                        <option></option>
+                                                        @if (ViewBag.countrylist != null)
+                                                        {
+                                                            @foreach (var item in ViewBag.countrylist)
+                                                            {
+                                                                <option value="@item.Id">@item.CountryName</option>
+                                                            }
+                                                        }
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="StateName" class="control-label"></label>
+                                                    <select asp-for="StateId" class="form-control" id="statelist" onchange="getCity(this.value)">
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="CityName" class="control-label"></label>
+
+                                                    <select asp-for="CityId" class="form-control" id="citylist">
+                                                        @if (ViewBag.citylist != null)
+                                                        {
+                                                            @foreach (var item in ViewBag.citylist)
+                                                            {
+                                                                <option value="@item.Id">@item.CityName</option>
+                                                            }
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Street" class="control-label"></label>
+                                                    <input asp-for="Street" class="form-control" />
+                                                    <span asp-validation-for="Street" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="ZipCode" class="control-label"></label>
+                                                    <input type="text" asp-for="ZipCode" class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+                                                    <span asp-validation-for="ZipCode" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Address" class="control-label"></label>
+                                                    <textarea asp-for="Address" class="control-label" style="width:100%" rows="5"></textarea>
+                                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Nationality" class="control-label"></label>
+                                                    <select asp-for="Nationality" class="form-control">
+                                                        <option selected></option>
+                                                        <option value="American">American</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                    <span asp-validation-for="Nationality" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="otherDetail">
+                                        @*<h4 class="info-text">What type of room would you want? </h4>*@
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h4 class="info-text">Emergency Contact</h4>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Emergency_Contact_Name" class="control-label"></label>
+                                                    <input type="text" asp-for="Emergency_Contact_Name" class="form-control" />
+                                                    <span asp-validation-for="Emergency_Contact_Name" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group label-floating">
+                                                    <label asp-for="Emergency_Contact_Number" class="control-label"></label>
+                                                    <input type="text" asp-for="Emergency_Contact_Number" class="form-control" />
+                                                    <span asp-validation-for="Emergency_Contact_Number" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="wizard-footer">
+                                    <div class="pull-right">
+
+                                        <input type='button' class='btn btn-next btn-fill btn-wd' name='next' value='Next' />
+                                        @*<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />*@
+                                        <button class="btn btn-finish btn-fill btn-wd btn btn-success submit-btn">Add Patient</button>
+                                    </div>
+                                    <div class="pull-left">
+                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> <!-- wizard container -->
+                </div>
+            </div> <!-- row -->
+        </div> <!--  big container -->
+
+    </div>
+</div>
+
+<script>
+
+    function ageCalculator() {
+        var userinput = document.getElementById("DOB").value;
+        var dob = new Date(userinput);
+        if (userinput == null || userinput == '') {
+            document.getElementById("message").innerHTML = "**Choose a date please!";
+            return false;
+        } else {
+
+            //calculate month difference from current date in time
+            var month_diff = Date.now() - dob.getTime();
+
+            //convert the calculated difference in date format
+            var age_dt = new Date(month_diff);
+
+            //extract year from date
+            var year = age_dt.getUTCFullYear();
+
+            //now calculate the age of the user
+            var age = Math.abs(year - 1970);
+
+            //display the calculated age
+            return $("#result").val(age);
+        }
+    }
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("DOB").setAttribute("max", today);
+
+
+    //$(document).ready(function () {
+    //    $("#CountryId").change(function () {
+    //        var _CountryId = $(this).val();
+    //        $.ajax({
+    //            type: "POST",
+    //            url: "/HospitalAdmin/StateListByCountryId",
+    //            data: { "CountryId": _CountryId },
+    //            success: function (data) {
+    //                $("#StateId").empty().append('<option selected="selected" value="">Please select</option>');
+    //                $.each(data, function (index) {
+    //                    $("#StateId").append($("<option></option>").val(data[index].id).html(data[index].stateName));
+    //                });
+    //            },
+    //            error: function (data) {
+    //                Swal.fire('Failed!', 'Faild', 'error');
+    //            }
+    //        });
+    //    });
+
+
+    //    $("#StateId").change(function () {
+    //        var _CountryId = $("#CountryId").val();
+    //        var _StateId = $(this).val();
+    //        $.ajax({
+    //            type: "POST",
+    //            url: "/HospitalAdmin/CitiesByCountryStatesId",
+    //            data: { "CountryId": _CountryId, "StateId": _StateId },
+    //            success: function (data) {
+
+    //                $("#CityId").empty().append('<option selected="selected" value="">Please select</option>');
+    //                $.each(data, function (index) {
+    //                    $("#CityId").append($("<option></option>").val(data[index].id).html(data[index].cityName));
+    //                });
+    //            },
+    //            error: function (data) {
+    //                Swal.fire('Failed!', 'Faild', 'error');
+    //            }
+    //        });
+    //    });
+    //});
+</script>
+
+<script src="~/admin/js/pages/GetCountryStateCity.js"></script>

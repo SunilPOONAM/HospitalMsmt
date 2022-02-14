@@ -1,0 +1,153 @@
+﻿@model IEnumerable<Hospital.Models.SubAdmin.Patients>
+
+@{
+    ViewData["Title"] = "PatientList";
+    Layout = "~/Views/Shared/_HospitalAdminLayout.cshtml";
+}
+
+<style>
+    tbody tr:hover {
+        background: lavender !important;
+        cursor: pointer;
+    }
+
+    .add_appointment:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+@*@Html.Raw(TempData["msg"])*@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/HospitalAdmin/index">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Patient List</li>
+
+    </ol>
+</nav>
+<div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h4 class="page-title page-title_main">Patients</h4>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                <a asp-action="AddPatient" class="btn_custom btn_patient btn btn-success btn-rounded float-right"><i class="fa fa-plus"></i> Add Patient</a>
+                <br />
+                <table class="table table-border table-striped custom-table datatable mb-0" id="myTable" style=" margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.PatientName)
+                            </th>
+                            <th>
+                                <i class="fa fa-id-card" aria-hidden="true"></i>  @Html.DisplayNameFor(model => model.PatientID)
+                            </th>
+                            <th>
+                                <i class="fa fa-line-chart" aria-hidden="true"></i>@Html.DisplayNameFor(model => model.Age)
+                            </th>
+                            <th>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>     @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th>
+                                <i class="fa fa-phone" aria-hidden="true"></i>   @Html.DisplayNameFor(model => model.Phone)
+                            </th>
+                            <t@*@Html.Raw(TempData["msg"])*@h>
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i> @Html.DisplayNameFor(model => model.IsActive)
+                            </t@*@Html.Raw(TempData["msg"])*@h>
+                            <th class="text-center">
+                                <i class="fa fa-gavel"></i>  Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PatientName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PatientID)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Age)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Phone)
+                                </td>
+                                <td>
+                                    @if (item.IsActive == "Active")
+                                    {
+                                        <span class="custom-badge status-green">
+                                            @Html.DisplayFor(modelItem => item.IsActive)
+                                        </span>
+                                    }
+                                    else if (item.IsActive == "IsActive")
+                                    {
+                                        <span class="custom-badge status-red">
+                                            @Html.DisplayFor(modelItem => item.IsActive)
+                                        </span>
+                                    }
+                                    else
+                                    {
+
+                                    }
+                                </td>
+
+                                <td class="text-right">
+                                    <a asp-action="AddAmount" asp-route-PatientID="@item.PatientID"><i class="fa fa-money" style="font-size: 19px; color: limegreen;" title="Add Payment"></i></a> |
+                                    @*<a asp-action="AddAppointment" asp-route-id="@item.Id" class="add_appointment">Add Appointment</a> |*@
+                                    <a asp-action="EditPatient" asp-route-id="@item.Id"><i class="fa fa-pencil-square-o" style="font-size: 19px"></i></a> |
+                                    <a asp-action="PatientDetails" asp-route-id="@item.Id"><i class="fa fa-info-circle m-r-5" style="font-size: 19px; color: lightblue"></i></a> |
+                                    <a asp-controller="HospitalAdmin" asp-action="PatientDelete" asp-route-id="@item.Id" onclick="DeletePatientAction('@item.Id')"><i class="fa fa-trash-o m-r-5" style="font-size: 19px; color: red"></i></a>
+
+                                </td>
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+                <script>
+                    function myFunction() {
+                        var input, filter, table, tr, td, i, txtValue;
+                        input = document.getElementById("myInput");
+                        filter = input.value.toUpperCase();
+                        table = document.getElementById("myTable");
+                        tr = table.getElementsByTagName("tr");
+                        for (i = 0; i < tr.length; i++) {
+                            td = tr[i].getElementsByTagName("td")[0];
+                            if (td) {
+                                txtValue = td.textContent || td.innerText;
+                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                    tr[i].style.display = "";
+                                } else {
+                                    tr[i].style.display = "none";
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/admin/js/pages/DeleteSweetAlert/All.js"></script>
+
+@*@Html.Raw(TempData["msg"])*@
